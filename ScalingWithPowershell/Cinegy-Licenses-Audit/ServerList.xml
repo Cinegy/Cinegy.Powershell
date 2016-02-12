@@ -1,0 +1,4 @@
+<ServerList>
+	<Server Name="Microserver" Address="http://10.183.3.69:8989/getinfo"/>
+	<Server Name="Lewis-T20" Address="http://127.0.0.1:8989/getinfo"/>
+</ServerList>
