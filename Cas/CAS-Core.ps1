@@ -2,12 +2,12 @@
 $AppVersion = "1.0"
 $LicenseId = '{6EECC5D8-DF37-4ead-B79C-25874FD616A2}'
 $CasVersion =  '1411301'
-$UserName = 'yourusernamehere'
-$Password = 'yourpasswordhere'	
+$UserName = 'usernamehere'
+$Password = 'passwordhere'	
 $UserDomain = 'munich'
 $DbServer = 'cinebsarc1'
-$DbName = 'Archive-Bristol-Trunk'
-$CasBaseUrl = "http://cinebstyan4.cinegy.local:8082/ICinegyDataAccessRestService/"
+$DbName = 'Archive-Bristol-v11'
+$CasBaseUrl = "http://cinebsarc1.munich.cinegy.local:8082/ICinegyDataAccessRestService/"
 
 function Create-CasAuthenticationHeader()
 {
