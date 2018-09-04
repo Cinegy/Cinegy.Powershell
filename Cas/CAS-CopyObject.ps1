@@ -6,7 +6,7 @@
 
 . .\CAS-Core.ps1
 
-# This script demonstrates a generic move of an object - for a more concrete example, see CAS-MoveRollToFolder which adds some more sane default handling
+# This script demonstrates a generic copy of an object - for a more concrete example, see CAS-CopySequenceToFolder which adds some more sane default handling
 
 $context = Get-CasContext
 
@@ -14,7 +14,7 @@ $context = Get-CasContext
 
 #"/move?node={node_id}&parent={parent_id}&position={pos}&befor={befor}
 
-# $SourceNodeId / node_id - This should be the DB ID of the object to move. This object must be 'movable' to work (e.g. a roll in a folder will move to another folder)
+# $SourceNodeId / node_id - This should be the DB ID of the object to copy. This object must be 'copyable' to work (e.g. a sequence in a folder to copy to another folder)
 
 # $TargetParentId / parent_id - this is the target folder to move the object into - it must be of a type that permits the object being moved as a child!
 
@@ -22,11 +22,11 @@ $context = Get-CasContext
 
 # $InsertBefore / befor - The 'before' flag is used to indicate the item should be inserted ahead of the item indicated by the 'position' ID. The default (or unspecified) action will result in the item being placed after that indicated item.
 
-$moveResult = Invoke-CasMethod -MethodRelativeUrl "/move?node=$SourceNodeId&parent=$TargetParentId&position=$PositionId&befor=$InsertBefore" -Context $context -Method POST 
+$moveResult = Invoke-CasMethod -MethodRelativeUrl "/copy?node=$SourceNodeId&parent=$TargetParentId&position=$PositionId&befor=$InsertBefore" -Context $context -Method POST 
 
 if($moveResult.retCode -ne 0)
 {
-    Write-Host "Error moving object: $($moveResult.error)"
+    Write-Host "Error copying object: $($moveResult.error)"
 }
 
 Invoke-CasLogout($context)
