@@ -43,6 +43,7 @@ function Invoke-CasMethod($MethodRelativeUrl, $Context, $Method="GET", $Body="")
     
     if($Method -eq "POST")
     {
+        $web.Headers.add("Content-Type", "application/json")
         $web.UploadString($settings.CasBaseUrl + $MethodRelativeUrl,$Body) | ConvertFrom-Json 
     }
 }
