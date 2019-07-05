@@ -29,8 +29,15 @@ else
 
     Write-Host "  Node:"
     Write-Host ($response.node.node | Format-List | Out-String)
+    
+    $labelComment = "Demo Marker"
+    $labelPosition = New-TimeSpan -Hours 10 -Minutes 2
+    $labelColor = 2 #(when colors are defaults, 1 = RED, 2 = BLUE... )
+
+    $response = Invoke-CasMethod -Method POST -MethodRelativeUrl "/createmarker?parent=$($SequenceId)&comment=$labelComment&start=$($labelPosition.Ticks)&color=$labelColor" -Context $context
 }
 
 #TODO: Add call to as-yet-not-existing CreateMarker function on CAS REST
+
 
 Invoke-CasLogout($context)
