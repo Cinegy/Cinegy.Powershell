@@ -19,7 +19,7 @@ if($response.retCode -ne 0)
 }
 else 
 {
-    Write-Host "Found node with ID: $($response.node.node._id._nodeid_id)"
+    Write-Host "Found node '$($response.node.node.name)' with ID: $($response.node.node._id._nodeid_id)"
     
     Write-Host "  Tags:"
     foreach($tag in $response.node.tags)
@@ -27,17 +27,21 @@ else
         Write-Host "    $($tag)"
     }
 
-    Write-Host "  Node:"
-    Write-Host ($response.node.node | Format-List | Out-String)
+    #Write-Host ($response.node.node | Format-List | Out-String)
     
     $labelComment = "Demo Marker"
-    $labelPosition = New-TimeSpan -Hours 10 -Minutes 2
-    $labelColor = 2 #(when colors are defaults, 1 = RED, 2 = BLUE... )
+    $labelPosition = New-TimeSpan -Hours 10 -Minutes 3
+    $labelColor = 1 #(when colors are defaults, 1 = RED, 2 = BLUE... )
 
-    $response = Invoke-CasMethod -Method POST -MethodRelativeUrl "/createmarker?parent=$($SequenceId)&comment=$labelComment&start=$($labelPosition.Ticks)&color=$labelColor" -Context $context
+    $createLabelResponse = Invoke-CasMethod -Method POST -MethodRelativeUrl "/createmarker?parent=$($SequenceId)&comment=$labelComment&start=$($labelPosition.Ticks)&color=$labelColor" -Context $context
+
+    if($createLabelResponse.retCode -eq 0)
+    {
+        Write-Host "Created marker in sequence"
+    }
+    else {
+        Write-Host "Failed to create marker in sequence - return code $($createLabelResponse.retCode)"
+    }
 }
-
-#TODO: Add call to as-yet-not-existing CreateMarker function on CAS REST
-
 
 Invoke-CasLogout($context)

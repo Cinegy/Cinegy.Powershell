@@ -13,7 +13,6 @@ if($result.retCode -ne 0)
     Write-Host "Error getting MCR XML for object: $($result.error)"
 }
 else {
-    Write-Host "Selected node MCR XML: $($result.resultXML)"
+    Invoke-CasLogout -Context $context    
+    return $result.resultXML
 }
-
-Invoke-CasLogout -Context $context
