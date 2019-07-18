@@ -84,7 +84,7 @@ function CreateAllServices{
             if(!$existingSvc)
             {
                 New-Service -Name "CinegyPlayoutEngine$($Matches[2])" `
-                    -BinaryPathName "$enginePath $($Matches[2])" `
+                    -BinaryPathName "$enginePath /N:$($Matches[2])" `
                     -DependsOn NetLogon -DisplayName "Cinegy Air Playout Engine Service $($Matches[2])" `
                     -StartupType Automatic -Description "The service wrapping configuration $($Matches[2]) of the Cinegy Air Playout Engine" | Out-Null
 
