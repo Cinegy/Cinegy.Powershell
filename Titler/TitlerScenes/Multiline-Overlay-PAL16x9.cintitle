@@ -1,0 +1,46 @@
+<CinegyTitler Version="2.2">
+  <RootFolder Path="C:\Users\lewis\Desktop\" />
+  <Variables>
+    <Var Name="PlateColor" Type="Color" UpdateType="Instant" Value="FF252582" />
+    <Var Name="Line1.Text" Type="String" UpdateType="Instant" Value="Line 1 Top Headline" />
+    <Var Name="Line2.Text" Type="String" UpdateType="Instant" Value="Line 2 detail" />
+    <Var Name="Line3.Text" Type="String" UpdateType="Instant" Value="Line 3 detail" />
+    <Var Name="Line4.Text" Type="String" UpdateType="Instant" Value="Line 4 detail" />
+    <Var Name="Line5.Text" Type="String" UpdateType="Instant" Value="Line 5 Bottom Headline" />
+    <Var Name="CalloutMainLine.Text" Type="String" UpdateType="Instant" Value="£9,999" />
+  </Variables>
+  <Scene Width="720" Height="576" Fps="25.000" Progressive="false" Aspect="16:9" Duration="750" Name="DealOfTheWeek" LoopEndFrame="750" BackgroundColor="FFD0D0D0">
+    <Plate Name="Alphamask" EditorFlags="8" Duration="750" Size="153.07;576.00" Position="-179.47;0.00;0.00">
+      <Gradient BeginPoint="0.00" EndPoint="100.00" />
+      <Mask Invert="true" />
+    </Plate>
+    <Plate Name="Backdrop" EditorFlags="8" Duration="750" Color="${PlateColor}" Size="768.00;576.00" Position="128.00;0.00;0.00" />
+    <Group Name="DynamicLines" Duration="750" Position="144.00;-11.00;0.00">
+      <Text Name="Line1" Duration="750" Size="469.92;32.00" Position="0.00;210.00;0.00" Font="Calibri;Regular;30;true;false" TextHAlign="Left" Value="${Line1.Text}">
+        <TextAutoFit MinSize="4" PreferredSize="30" MinSpacing="-2.00;-2.00;-16.00" />
+      </Text>
+      <Text Name="Line2" Duration="750" Size="469.92;32.00" Position="0.00;140.00;0.00" Font="Calibri;Regular;30;false;false" TextHAlign="Left" Value="${Line2.Text}">
+        <TextAutoFit MinSize="4" PreferredSize="30" MinSpacing="-2.00;-2.00;-16.00" />
+      </Text>
+      <Text Name="Line3" Duration="750" Size="469.92;32.00" Position="0.00;70.00;0.00" Font="Calibri;Regular;30;false;false" TextHAlign="Left" Value="${Line3.Text}">
+        <TextAutoFit MinSize="4" PreferredSize="30" MinSpacing="-2.00;-2.00;-16.00" />
+      </Text>
+      <Text Name="Line4" Duration="750" Size="469.92;32.00" Font="Calibri;Regular;30;false;false" TextHAlign="Left" Value="${Line4.Text}">
+        <TextAutoFit MinSize="4" PreferredSize="30" MinSpacing="-2.00;-2.00;-16.00" />
+      </Text>
+      <Text Name="Line5" Duration="750" Size="469.92;32.00" Position="0.00;-70.00;0.00" Font="Calibri;Regular;30;true;false" TextHAlign="Left" Value="${Line5.Text}">
+        <TextAutoFit MinSize="4" PreferredSize="30" MinSpacing="-2.00;-2.00;-16.00" />
+      </Text>
+    </Group>
+    <Group Name="Callout" Duration="750" Position="246.00;58.00;0.00">
+      <Plate Name="Plate" Duration="750" Size="180.00;144.00">
+        <Gradient Mode="Rectangular" Direction="Out" BeginPoint="0.00" EndPoint="100.00" BeginColor="FF0C0421" EndColor="FF1E1A57" />
+      </Plate>
+      <Text Name="CalloutTopLine" Duration="750" Size="180.00;32.00" Position="0.00;52.00;0.00" Font="Arial;Regular;20;false;false" Value="Act Now" />
+      <Text Name="CalloutMainLine" EditorFlags="4" Duration="750" Size="180.00;139.88" Position="0.00;-0.45;0.00" Font="Arial;Regular;52;true;false" TextVAlign="Center" Value="${CalloutMainLine.Text}" />
+      <Text Name="CalloutBottomLine" EditorFlags="8" Duration="750" Size="180.00;32.00" Position="0.00;-63.29;0.00" Font="Arial;Regular;20;true;false" Value="Time Limited!" />
+    </Group>
+    <Plate Name="Linebreak" Duration="750" Size="484.76;2.00" Position="146.38;-128.00;0.00" />
+    <Text Name="BottomLine" Duration="750" Size="479.36;32.00" Position="149.68;-174.00;0.00" Font="Calibri;Regular;34;true;false" TextHAlign="Left" Value="CALL NOW: +49 89 238853 65" />
+  </Scene>
+</CinegyTitler>
