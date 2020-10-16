@@ -3,6 +3,11 @@
 #have been passed in (also via the $provider object) before finishing.
 param($provider)
 
+if($null -eq $provider) {
+    Write-Host "Cinegy Provider parameter is null - is this script hosted within EventManager?"
+    exit
+}
+
 #user configurable defaults here:
 $dataFolder = "D:\Data\Dev\GIT\powershell\Titler\DataSamples"
 $separatorChar = ";"
@@ -68,9 +73,9 @@ if($null -eq $variables) {
 #if we have found any variables to set, set them
 if($variables){
     $varTable = @{}
-    for($lineNumber = 1;$lineNumber -le $variables.Count;$lineNumber++){
-        $logger.LogInfo("Sending variable Line$lineNumber.Text=$($variables[$lineNumber-1])")
-        $varTable.Add("Line$lineNumber.Text",$variables[$lineNumber-1])
+    for($variableNumber = 1;$variableNumber -le $variables.Count;$variableNumber++){
+        $logger.LogInfo("Sending variable Line$variableNumber.Text=$($variables[$variableNumber-1])")
+        $varTable.Add("Line$variableNumber.Text",$variables[$variableNumber-1])
     }
     PostVariablesToAir -ServerUrl $serverUrl -VarTable $varTable
 }
