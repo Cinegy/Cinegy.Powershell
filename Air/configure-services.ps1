@@ -2,16 +2,15 @@
 
 #script to install Cinegy Playout Engine as a Windows Service
 
+#This variable represents the expected location of the actual playout engine exe - CHECK THIS IS FOR THE CORRECT VERSION!
+$enginePath = "C:\Program Files\Cinegy\Cinegy Playout x64 15.0.0\PlayOutExApp.exe"
+
 #Actions hashtable for main menu
 $actions = [ordered]@{
     "CreateAll" = @{
         "Description" = "Create Missing Services For All Configured Engines"
         "Function" = "CreateAllServices"
     }
-    #"RecreateSpecific" = @{
-    #    "Description" = "(Re)create Service For Specific Engine Number"
-    #    "Function" = "RecreateSpecificService"
-    #}
     "StopAll" = @{
         "Description" = "Stop All Services"
         "Function" = "StopAllServices"
@@ -20,10 +19,6 @@ $actions = [ordered]@{
         "Description" = "Remove All Services"
         "Function" = "RemoveAllServices"
     }
-    #"RemoveSpecifc" = @{
-    #    "Description" = "Remove Service For Specific Engine Number"
-    #   "Function" = "RemoveSpecifcService"
-    #}
     "Exit" = @{
         "Description" = "Exit"
         "Function" = "exit"
@@ -33,9 +28,6 @@ $actions = [ordered]@{
 #This variable represents the expected location of the dashboard inhibit flag.
 #It is also used as the source of the pop-up message when the dash is started while inhibited
 $flagPath = "C:\ProgramData\Cinegy\CinegyAir\InhibitDashboard.flag"
-
-#This variable represents the expected location of the actual playout engine exe.
-$enginePath = "C:\Program Files\Cinegy\Cinegy Playout x64 14.0.0\PlayOutExApp.exe"
 
 function Set-ServiceRecovery{
     param
