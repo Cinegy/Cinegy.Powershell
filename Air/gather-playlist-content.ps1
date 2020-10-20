@@ -75,8 +75,6 @@ foreach($file in $uniqueTitlerScenes) {
     }
 }
 
-exit
-
 #loop through each media file, and then check it exists at source
 foreach($file in $uniqueFiles) {
     if($DoCopy -and (Test-Path -Path $file)) {
@@ -92,5 +90,3 @@ foreach($file in $uniqueFiles) {
         }        
     }
 }
-
-
