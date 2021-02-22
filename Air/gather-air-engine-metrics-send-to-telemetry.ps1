@@ -117,13 +117,28 @@ function Get-AirSrtMetricsMessage() {
     }
 
     $telemetry = [xml](Invoke-WebRequest -Uri http://$($airengine):$(5521+$airInstance)/metrics/srt).Content
-    
+        
     $body = ""
     $queryTime = (Get-Date).ToString("O")
+ 
+	if([bool]$(Get-Member -inputobject $telemetry -name "Connections" -Membertype Properties) -eq $false) {
+        $global:lastRecords = $null
+        return $null
+    }
+
+    if([bool]$(Get-Member -inputobject $telemetry.Connections -name "Connection" -Membertype Properties) -eq $false) {
+        $global:lastRecords = $null
+        return $null
+    }
 
     $records = $telemetry.Connections.Connection | Sort-Object -Property "MsTimeStamp"
     
     if($null -eq $global:lastRecords) { $global:lastRecords = $records }
+    
+	if($(Get-Member -inputobject $global:lastRecords -name "Connections" -Membertype Properties) -eq $false) {
+        $global:lastRecords = $null
+        return $null
+    }
 
     foreach ($record in $records) {
         #don't log any stats for localhost connections
@@ -132,27 +147,39 @@ function Get-AirSrtMetricsMessage() {
         $connectedTime = [TimeSpan]::FromMilliseconds($record.MsTimeStamp)
         Write-Host "Connection $($record.Key) - ($($connectedTime.ToString("dd' days 'hh\:mm\:ss"))) "
 
-        # if($lastPktRetrans[$record.Key] == $null || $lastPktRetrans[$record.Key] -lt $record.pktRetrans) {
-        #     $lastPktRetrans[$record.Key] = $record.pktRetrans
-        # }
-
         $deltaPktRetrans = 0
         $deltaPktSndLoss = 0
         $deltaPktRcvLoss = 0
+        $deltaPktSndDrop = 0
+        $deltaPktRcvDrop = 0
+        $deltaPktSent = 0
+        $deltaPktRecv = 0
         $deltaMsRtt = 0.0
+        $deltaPctPktLoss = 0.0
+
         #check a few key values to create delta values (more efficient to pre-calc and store than live query)
         foreach ($lastRecord in $global:lastRecords) {
             if($lastRecord.Key -eq $record.Key) {
                 $deltaPktRetrans = [int64]$record.PktRetrans - [int64]$lastRecord.PktRetrans
                 $deltaPktSndLoss = [int64]$record.PktSndLoss - [int64]$lastRecord.PktSndLoss
                 $deltaPktRcvLoss = [int64]$record.PktRcvLoss - [int64]$lastRecord.PktRcvLoss
+                $deltaPktSndDrop = [int64]$record.PktSndDrop - [int64]$lastRecord.PktSndDrop
+                $deltaPktRcvDrop = [int64]$record.PktRcvDrop - [int64]$lastRecord.PktRcvDrop
+                $deltaPktSent = [int64]$record.PktSent - [int64]$lastRecord.PktSent
+                $deltaPktRecv = [int64]$record.PktRecv - [int64]$lastRecord.PktRecv                
                 $deltaMsRtt = [single]$record.MsRTT - [single]$lastRecord.MsRTT
-                break
+
+                if($deltaPktRetrans -gt 0) {
+                    if($deltaPktSent -gt 0) {
+                        $deltaPctPktLoss = ($deltaPktRetrans / $deltaPktSent) * 100
+                    }
+                    else {
+                        $deltaPctPktLoss = ($deltaPktRetrans / $deltaPktRecv) * 100
+                    }
+                }
             }
         }
         
-        $global:lastRecords = $records
-
         #create an object of minimum structure to send to ElasticSearch (this will be the second line sent to server)
         $log = [PSCustomObject]@{
             level = $Level
@@ -217,13 +244,23 @@ function Get-AirSrtMetricsMessage() {
                 deltaPktRetrans = $deltaPktRetrans
                 deltaPktSndLoss = $deltaPktSndLoss
                 deltaPktRcvLoss = $deltaPktRcvLoss
+                deltaPktSndDrop = $deltaPktSndDrop
+                deltaPktRcvDrop = $deltaPktRcvDrop
+                deltaPktSent = $deltaPktSent
+                deltaPktRecv = $deltaPktRecv
+                deltaPctPktLoss = $deltaPctPktLoss
                 deltaMsRtt = $deltaMsRtt
             }
         }
 
+        #debug print the metrics to console
+        #ConvertTo-Json -InputObject $log | Write-Host
+        
         #convert the custom objects to JSON format, and append each object on a single line
         $body += (ConvertTo-Json -InputObject $index -Compress) + "`n" + (ConvertTo-Json -InputObject $log -Compress) + "`n"
     }
+
+    $global:lastRecords = $records
 
     return $body
 }
@@ -250,7 +287,9 @@ while($true) {
     if($enableSrtStatistics) {
         $srtMessage = Get-AirSrtMetricsMessage
 
-        Send-TelemetryMessage -body $srtMessage
+        if($null -ne $srtMessage) {
+            Send-TelemetryMessage -body $srtMessage
+        }
     }
 
     Start-Sleep 5    
