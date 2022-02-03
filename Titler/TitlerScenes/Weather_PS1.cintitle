@@ -1,0 +1,24 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="N:\Gfx_Rep\" />
+  <Variables>
+    <Var Name="City" Type="String" UpdateType="AutoRestart" Value="London" />
+    <Var Name="Temp" Type="String" UpdateType="Restart" Value="5 c" />
+    <Var Name="Icon_url" Type="File" UpdateType="Restart" Value="D:\weather_icon\64x64\day\182.png" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="130" Name="Weather_PS1" PlayMode="Loop" LoopStartFrame="30" LoopEndFrame="94" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="Weather elements" Duration="130" Opacity="0">
+      <Opacity>
+        <Bezier Frame="0" Value="0" a="0.32" b="0" c="0.68" d="1" />
+        <Bezier Frame="30" Value="100" a="0.32" b="0" c="0.68" d="1" />
+        <Bezier Frame="95" Value="100" a="0.32" b="0" c="0.68" d="1" />
+        <Bezier Frame="125" Value="1.29" a="0.32" b="0" c="0.68" d="1" />
+      </Opacity>
+      <Plate Name="Weather Strap" Duration="125" Color="FF071658" Opacity="54" Size="414.34;193.75" Position="-558.83;-332.42;0.00" />
+      <Text Name="Temp" Duration="125" Size="255.48;93.88" Position="-630.00;-385.00;0.00" Font="Arial;Regular;76;false;false" TextVAlign="Center" Value="${Temp}" />
+      <Text Name="City" Duration="125" Size="407.99;93.88" Position="-559.00;-291.00;0.00" Font="Arial;Regular;76;false;false" TextVAlign="Center" Value="${City}">
+        <TextAutoFit MinSize="4" PreferredSize="76" MinSpacing="-8.00;-8.00;-33.00" />
+      </Text>
+      <Plate Name="Icon" EditorFlags="4" Duration="125" Size="172.87;102.67" Position="-488.00;-376.00;0.00" Source="File" File="${Icon_url}" />
+    </Group>
+  </Scene>
+</CinegyTitler>

@@ -1,0 +1,8 @@
+<CityList>
+	<City Name="Paris" LocID="12596963" Abbreviation="Par" />
+	<City Name="Amsterdam" LocID="727232" Abbreviation="Ams" />
+	<City Name="Milan" LocID="718345" Abbreviation="Mil" />
+	<City Name="Reykjavik" LocID="980389" Abbreviation="Rejk" />
+	<City Name="Moscow" LocID="2122265" Abbreviation="Mos" />
+	<City Name="Antananarivo" LocID="2346150" Abbreviation="Ant" />
+</CityList>

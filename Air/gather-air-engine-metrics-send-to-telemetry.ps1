@@ -1,16 +1,16 @@
-﻿#Script to read a Cinegy Air Engine 'metrics' REST API, and then pre-process this data into the format needed for our ElasticSearch dashboards.
+#Script to read a Cinegy Air Engine 'metrics' REST API, and then pre-process this data into the format needed for our ElasticSearch dashboards.
 #By default, this script will send the telemetry to the Cinegy central telemetry portal - this is not supported for production critical use.
 
 Set-StrictMode -Version Latest
 
 #change these variables depending upon your environment
-$telemetryServerUrl = "https://telemetry.cinegy.com"
+$telemetryServerUrl = "https://telemetry-cinegycloud.cinegy.com"
 $OrganizationName="cinegy"
-$tags="test,aws-east"
-$airengine = "TESTENGINE1"
+$tags="test,localhost"
+$airengine = "localhost"
 $airInstance = 0
 $channelName = "Test Channel HD1" #friendly name that will appear in dashboard drop-downs and labels
-$enableSrtStatistics = $false # SRT stats is only supported in unreleased builds, so defaulted to 'off' in sample script
+$enableSrtStatistics = $true # SRT stats is only supported in unreleased builds, so defaulted to 'off' in sample script
 
 #don't change these unless you know what you are doing
 $IndexName = "airengine"
@@ -287,7 +287,7 @@ while($true) {
     if($enableSrtStatistics) {
         $srtMessage = Get-AirSrtMetricsMessage
 
-        if($null -ne $srtMessage) {
+        if(![string]::IsNullOrEmpty($srtMessage)) {
             Send-TelemetryMessage -body $srtMessage
         }
     }
