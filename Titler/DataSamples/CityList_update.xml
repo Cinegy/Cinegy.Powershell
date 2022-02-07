@@ -1,8 +1,15 @@
 <CityList>
+	<City Name="London" LocID="2346150" Abbreviation="Lon" />
 	<City Name="Paris" LocID="12596963" Abbreviation="Par" />
 	<City Name="Amsterdam" LocID="727232" Abbreviation="Ams" />
-	<City Name="Milan" LocID="718345" Abbreviation="Mil" />
-	<City Name="Reykjavik" LocID="980389" Abbreviation="Rejk" />
+	<City Name="Madrid" LocID="2346150" Abbreviation="Mad" />
+	<City Name="Lisbon" LocID="2346150" Abbreviation="Lis" />
+	<City Name="Berlin" LocID="2346150" Abbreviation="Ber" />
+	<City Name="Vienna" LocID="2346150" Abbreviation="Vie" />
+	<City Name="Roma" LocID="718345" Abbreviation="Rom" />
+	<City Name="Zagreb" LocID="2346150" Abbreviation="Zag" />	
 	<City Name="Moscow" LocID="2122265" Abbreviation="Mos" />
-	<City Name="Antananarivo" LocID="2346150" Abbreviation="Ant" />
+	<City Name="New York" LocID="2346150" Abbreviation="New" />	
+	<City Name="Beijing" LocID="2346150" Abbreviation="Bei" />
+	<City Name="Tokyo" LocID="2346150" Abbreviation="Tok" />
 </CityList>

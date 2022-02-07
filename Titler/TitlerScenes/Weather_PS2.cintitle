@@ -1,0 +1,92 @@
+<CinegyTitler Version="2.2">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Powershell\Titler\TitlerScenes\" />
+  <Variables>
+    <Var Name="City1" Type="String" UpdateType="AutoRestart" Value="Amsterdam" />
+    <Var Name="Temp1" Type="String" UpdateType="Restart" Value="5 c" />
+    <Var Name="Icon1_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\182.png" />
+    <Var Name="City2" Type="String" UpdateType="Restart" Value="London" />
+    <Var Name="Temp2" Type="String" UpdateType="Restart" Value="5 c" />
+    <Var Name="Icon2_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\113.png" />
+    <Var Name="City3" Type="String" UpdateType="Restart" Value="Mosvow" />
+    <Var Name="Temp3" Type="String" UpdateType="Restart" Value="5 c" />
+    <Var Name="Icon3_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\200.png" />
+    <Var Name="City4" Type="String" UpdateType="Restart" Value="Madrid" />
+    <Var Name="Temp4" Type="String" UpdateType="Restart" Value="5 c" />
+    <Var Name="Icon4_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\329.png" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="30" Name="Weather_PS2" EditorFlags="4" PlayMode="Loop" LoopStartFrame="11" LoopEndFrame="19" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="Weather elements" Duration="30">
+      <Plate Name="Weather Strap" Duration="30" Color="FF071658" Opacity="88" Size="1535.00;1.42" Position="0.00;-480.00;0.00">
+        <Size>
+          <Y>
+            <Linear Frame="4" Value="0.00" />
+            <Linear Frame="9" Value="100.00" />
+            <Linear Frame="21" Value="100.00" />
+            <Linear Frame="26" Value="0.00" />
+          </Y>
+        </Size>
+        <Position>
+          <Y>
+            <Linear Frame="4" Value="-480.00" />
+            <Linear Frame="9" Value="-430.00" />
+            <Linear Frame="21" Value="-430.00" />
+            <Linear Frame="26" Value="-380.00" />
+          </Y>
+        </Position>
+        <Gradient BeginPoint="0.00" EndPoint="100.00" BeginColor="FF006F8C" EndColor="FF00A649" />
+      </Plate>
+      <Plate Name="WeatherBarMask" Start="1" Duration="28" Size="1535.00;100.00" Position="0.00;-430.00;0.00">
+        <Mask />
+      </Plate>
+      <Group Name="TopCity_Bar" EditorFlags="8" Start="1" Duration="28" Position="0.00;-432.00;0.00">
+        <Position>
+          <Y>
+            <Linear Frame="4" Value="-530.00" />
+            <Linear Frame="9" Value="-430.00" />
+            <Linear Frame="21" Value="-430.00" />
+            <Linear Frame="26" Value="-330.00" />
+          </Y>
+        </Position>
+        <Group Name="City1" EditorFlags="8" Start="1" Duration="28" Position="-577.50;0.00;0.00">
+          <Text Name="City1" Start="1" Duration="28" Size="250.00;60.00" Position="-55.00;20.00;0.00" Font="Century Gothic;Regular;60;true;false" TextVAlign="Center" Value="${City1}">
+            <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-8.00;-8.00;-33.00" />
+          </Text>
+          <Text Name="Temp1" EditorFlags="8" Start="1" Duration="28" Size="250.00;45.00" Position="-55.00;-25.00;0.00" Font="Century Gothic;Regular;45;true;false" TextVAlign="Center" Value="${Temp1}">
+            <TextAutoFit MinSize="35" PreferredSize="45" MinSpacing="-8.00;-8.00;-34.00" />
+          </Text>
+          <Plate Name="Icon1" EditorFlags="8" Start="1" Duration="28" Size="100.00;100.00" Position="135.00;1.00;0.00" Source="File" File="${Icon1_url}" />
+        </Group>
+        <Plate Name="Separator1" Start="1" Duration="28" Color="FFF0F0F0" Opacity="60" Size="5.00;90.00" Position="-385.00;0.00;0.00" />
+        <Group Name="City2" EditorFlags="8" Start="1" Duration="28" Position="-192.50;0.00;0.00">
+          <Text Name="City2" Start="1" Duration="28" Size="250.00;60.00" Position="-55.00;20.00;0.00" Font="Century Gothic;Regular;60;true;false" TextVAlign="Center" Value="${City2}">
+            <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-8.00;-8.00;-33.00" />
+          </Text>
+          <Text Name="Temp2" EditorFlags="8" Start="1" Duration="28" Size="250.00;45.00" Position="-55.00;-25.00;0.00" Font="Century Gothic;Regular;45;true;false" TextVAlign="Center" Value="${Temp2}">
+            <TextAutoFit MinSize="35" PreferredSize="45" MinSpacing="-8.00;-8.00;-34.00" />
+          </Text>
+          <Plate Name="Icon2" EditorFlags="8" Start="1" Duration="28" Size="100.00;100.00" Position="135.00;1.00;0.00" Source="File" File="${Icon2_url}" />
+        </Group>
+        <Plate Name="Separator2" Start="1" Duration="28" Color="FFF0F0F0" Opacity="60" Size="5.00;90.00" />
+        <Group Name="City3" EditorFlags="8" Start="1" Duration="28" Position="192.50;0.00;0.00">
+          <Text Name="City3" Start="1" Duration="28" Size="250.00;60.00" Position="-55.00;20.00;0.00" Font="Century Gothic;Regular;60;true;false" TextVAlign="Center" Value="${City3}">
+            <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-8.00;-8.00;-33.00" />
+          </Text>
+          <Text Name="Temp3" EditorFlags="8" Start="1" Duration="28" Size="250.00;45.00" Position="-55.00;-25.00;0.00" Font="Century Gothic;Regular;45;true;false" TextVAlign="Center" Value="${Temp3}">
+            <TextAutoFit MinSize="35" PreferredSize="45" MinSpacing="-8.00;-8.00;-34.00" />
+          </Text>
+          <Plate Name="Icon3" EditorFlags="8" Start="1" Duration="28" Size="100.00;100.00" Position="135.00;1.00;0.00" Source="File" File="${Icon3_url}" />
+        </Group>
+        <Plate Name="Separator3" Start="1" Duration="28" Color="FFF0F0F0" Opacity="60" Size="5.00;90.00" Position="385.00;0.00;0.00" />
+        <Group Name="City4" EditorFlags="8" Start="1" Duration="28" Position="577.50;0.00;0.00">
+          <Text Name="City4" Start="1" Duration="28" Size="250.00;60.00" Position="-55.00;20.00;0.00" Font="Century Gothic;Regular;60;true;false" TextVAlign="Center" Value="${City4}">
+            <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-8.00;-8.00;-33.00" />
+          </Text>
+          <Text Name="Temp4" EditorFlags="8" Start="1" Duration="28" Size="250.00;45.00" Position="-55.00;-25.00;0.00" Font="Century Gothic;Regular;45;true;false" TextVAlign="Center" Value="${Temp4}">
+            <TextAutoFit MinSize="35" PreferredSize="45" MinSpacing="-8.00;-8.00;-34.00" />
+          </Text>
+          <Plate Name="Icon4" EditorFlags="8" Start="1" Duration="28" Size="100.00;100.00" Position="135.00;1.00;0.00" Source="File" File="${Icon4_url}" />
+        </Group>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>
