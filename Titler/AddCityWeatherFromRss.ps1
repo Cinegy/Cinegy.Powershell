@@ -59,7 +59,7 @@ while ($true) {
                     $xmlSetValueElem = $xmlRootElem.AppendChild($xmlDoc.CreateElement('SetValue'));
                     $xmlSetValueElem.SetAttribute("Name", 'Temp');
                     $xmlSetValueElem.SetAttribute("Type", 'Text');
-                    $xmlSetValueElem.SetAttribute("Value", $feed.root.current.temp_c.ToString() + ' C');
+                    $xmlSetValueElem.SetAttribute("Value", $feed.root.current.temp_c.ToString() + '°C');
 
                     $IconPath = $feed.root.current.condition.icon
                     $PathEle = $IconPath.Split("/")

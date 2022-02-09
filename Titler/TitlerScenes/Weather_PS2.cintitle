@@ -1,4 +1,4 @@
-<CinegyTitler Version="2.2">
+<CinegyTitler Version="2.4">
   <RootFolder Path="C:\Data\Dev\Git\Cinegy.Powershell\Titler\TitlerScenes\" />
   <Variables>
     <Var Name="City1" Type="String" UpdateType="AutoRestart" Value="Amsterdam" />
@@ -7,7 +7,7 @@
     <Var Name="City2" Type="String" UpdateType="Restart" Value="London" />
     <Var Name="Temp2" Type="String" UpdateType="Restart" Value="5 c" />
     <Var Name="Icon2_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\113.png" />
-    <Var Name="City3" Type="String" UpdateType="Restart" Value="Mosvow" />
+    <Var Name="City3" Type="String" UpdateType="Restart" Value="Moscow" />
     <Var Name="Temp3" Type="String" UpdateType="Restart" Value="5 c" />
     <Var Name="Icon3_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\200.png" />
     <Var Name="City4" Type="String" UpdateType="Restart" Value="Madrid" />
@@ -56,7 +56,7 @@
           </Text>
           <Plate Name="Icon1" EditorFlags="8" Start="1" Duration="28" Size="100.00;100.00" Position="135.00;1.00;0.00" Source="File" File="${Icon1_url}" />
         </Group>
-        <Plate Name="Separator1" Start="1" Duration="28" Color="FFF0F0F0" Opacity="60" Size="5.00;90.00" Position="-385.00;0.00;0.00" />
+        <Plate Name="Separator1" Start="1" Duration="28" Color="FFF0F0F0" Opacity="75" Size="5.00;90.00" Position="-385.00;0.00;0.00" />
         <Group Name="City2" EditorFlags="8" Start="1" Duration="28" Position="-192.50;0.00;0.00">
           <Text Name="City2" Start="1" Duration="28" Size="250.00;60.00" Position="-55.00;20.00;0.00" Font="Century Gothic;Regular;60;true;false" TextVAlign="Center" Value="${City2}">
             <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-8.00;-8.00;-33.00" />
@@ -66,7 +66,7 @@
           </Text>
           <Plate Name="Icon2" EditorFlags="8" Start="1" Duration="28" Size="100.00;100.00" Position="135.00;1.00;0.00" Source="File" File="${Icon2_url}" />
         </Group>
-        <Plate Name="Separator2" Start="1" Duration="28" Color="FFF0F0F0" Opacity="60" Size="5.00;90.00" />
+        <Plate Name="Separator2" Start="1" Duration="28" Color="FFF0F0F0" Opacity="75" Size="5.00;90.00" />
         <Group Name="City3" EditorFlags="8" Start="1" Duration="28" Position="192.50;0.00;0.00">
           <Text Name="City3" Start="1" Duration="28" Size="250.00;60.00" Position="-55.00;20.00;0.00" Font="Century Gothic;Regular;60;true;false" TextVAlign="Center" Value="${City3}">
             <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-8.00;-8.00;-33.00" />
@@ -76,7 +76,7 @@
           </Text>
           <Plate Name="Icon3" EditorFlags="8" Start="1" Duration="28" Size="100.00;100.00" Position="135.00;1.00;0.00" Source="File" File="${Icon3_url}" />
         </Group>
-        <Plate Name="Separator3" Start="1" Duration="28" Color="FFF0F0F0" Opacity="60" Size="5.00;90.00" Position="385.00;0.00;0.00" />
+        <Plate Name="Separator3" Start="1" Duration="28" Color="FFF0F0F0" Opacity="75" Size="5.00;90.00" Position="385.00;0.00;0.00" />
         <Group Name="City4" EditorFlags="8" Start="1" Duration="28" Position="577.50;0.00;0.00">
           <Text Name="City4" Start="1" Duration="28" Size="250.00;60.00" Position="-55.00;20.00;0.00" Font="Century Gothic;Regular;60;true;false" TextVAlign="Center" Value="${City4}">
             <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-8.00;-8.00;-33.00" />
