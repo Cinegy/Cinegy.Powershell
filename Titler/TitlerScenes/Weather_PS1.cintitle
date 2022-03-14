@@ -1,0 +1,26 @@
+<CinegyTitler Version="2.4">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Powershell\Titler\TitlerScenes\" />
+  <Variables>
+    <Var Name="City" Type="String" UpdateType="AutoRestart" Value="Amsterdam" />
+    <Var Name="Temp" Type="String" UpdateType="Restart" Value="5 c" />
+    <Var Name="Icon_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\116.png" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="30" Name="Weather_PS1" EditorFlags="4" PlayMode="Loop" LoopStartFrame="10" LoopEndFrame="20" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="Weather elements" Duration="30" Position="-638.00;-435.00;0.00">
+      <Opacity>
+        <Linear Frame="1" Value="0" />
+        <Linear Frame="6" Value="100" />
+        <Linear Frame="24" Value="100" />
+        <Linear Frame="29" Value="0" />
+      </Opacity>
+      <Plate Name="Weather Strap" Duration="30" Opacity="89" Size="450.00;100.00">
+        <Gradient BeginPoint="0.00" EndPoint="100.00" BeginColor="FF006F8C" EndColor="FF00A649" />
+      </Plate>
+      <Text Name="City" Duration="30" Size="350.00;60.00" Position="-50.00;20.00;0.00" Font="Century Gothic;Regular;60;true;false" WordWrap="false" TextVAlign="Center" Value="${City}" />
+      <Text Name="Temp" Duration="30" Size="300.00;45.00" Position="-50.00;-25.00;0.00" Font="Century Gothic;Regular;45;true;false" WordWrap="false" TextVAlign="Center" Value="${Temp}">
+        <TextAutoFit MinSize="25" PreferredSize="45" MinSpacing="-5.00;-5.00;-20.00" />
+      </Text>
+      <Plate Name="Icon" Duration="30" Size="100.00;100.00" Position="175.00;1.00;0.00" Source="File" File="${Icon_url}" />
+    </Group>
+  </Scene>
+</CinegyTitler>

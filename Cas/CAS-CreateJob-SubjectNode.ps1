@@ -35,7 +35,7 @@ else
             parent_id = $jobDropTargetId
             name = $JobName
             job_disabled = $CreateDisabled
-            subjects = @( $subjectNode.node.node )
+            subjects = @( $subjectNodeResult.node.node )
         }
 
         # generate request body, use Depth to properly serialize "subjects"
