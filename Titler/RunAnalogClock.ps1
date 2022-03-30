@@ -2,9 +2,9 @@
 # Cinegy example Analog Clock Script
 # This script reads current time from host computer and shows it as a cinegy titler template on screen
 # It demonstrates basic PowerShell - Cinegy Titler variables can set text variables through the 'Postbox'
-# To use - fill in the variables, manually load in (or schedule) the clock, and set the script running.
+# To use - fill in the variables, manually load in (or schedule) one of the clock scenes (Classic, Roman, Simple), and set the script running.
 # If you would like to see how to more reliably make sure the script is running and maybe pass in some values
-# to a script (like chosen city) in reaction to the current item - see this post:
+# to a script in reaction to the current item - see this post:
 # https://open.cinegy.com/posts/2020-02-03-automated-dynamic-graphics/
 # To see how to trigger the scene to come on-air from the script, see
 # https://github.com/Cinegy/Cinegy.Powershell/blob/master/Titler/PushTitlerTemplateOnAir.ps1
