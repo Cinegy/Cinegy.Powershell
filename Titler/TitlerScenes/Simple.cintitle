@@ -1,0 +1,17 @@
+<CinegyTitler Version="2.4">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Powershell\Titler\TitlerScenes\" />
+  <Variables>
+    <Var Name="Hour" Type="Float" UpdateType="Instant" Value="0.00" />
+    <Var Name="Minute" Type="Float" UpdateType="Instant" Value="0.00" />
+    <Var Name="Second" Type="Float" UpdateType="Instant" Value="0.00" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="60" Name="AnalogClock" PlayMode="Loop" LoopStartFrame="20" LoopEndFrame="40" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="SimpleClock" EditorFlags="12" Duration="60">
+      <Plate Name="Background" Duration="60" Size="1080.00;1080.00" Source="File" File=".\Simple\Background.png" />
+      <Plate Name="Hour" Duration="60" Size="1080.00;1080.00" Rotation="0.00;0.00;${Hour}" Source="File" File=".\Simple\HourHand.png" />
+      <Plate Name="Minute" EditorFlags="8" Duration="60" Size="1080.00;1080.00" Rotation="0.00;0.00;${Minute}" Source="File" File=".\Simple\MinuteHand.png" />
+      <Plate Name="Second" Duration="60" Size="1080.00;1080.00" Rotation="0.00;0.00;${Second}" Source="File" File=".\Simple\SecondsHand.png" />
+      <Plate Name="Center" Duration="60" Size="1080.00;1080.00" Source="File" File=".\Simple\Center.png" />
+    </Group>
+  </Scene>
+</CinegyTitler>
