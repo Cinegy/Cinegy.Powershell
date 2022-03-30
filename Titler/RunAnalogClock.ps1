@@ -14,10 +14,13 @@
 #  Vars to be set     #
 #######################
 $airEngineHostName = "127.0.0.1" # hostname of machine running Cinegy Air Engine
-airEngineInstanceNumber = 0 # playout engine instance number (zero-based)
+$airEngineInstanceNumber = 0 # playout engine instance number (zero-based)
 
 #create a .Net webclient which will be used to perform the HTTP POST (we'll keep it separate from the client the RSS reading uses)
 $web = New-Object Net.WebClient
+
+#Air requires that the data is in XML format and declared properly - so add the HTTP Header to state this
+$web.Headers.add("Content-Type", "text/xml; charset=utf-8")
 
 #make a Type PostRequest XML document using .Net XML document object
 $xmlDoc = New-Object System.Xml.XmlDocument;
