@@ -19,8 +19,6 @@ airEngineInstanceNumber = 0 # playout engine instance number (zero-based)
 #create a .Net webclient which will be used to perform the HTTP POST (we'll keep it separate from the client the RSS reading uses)
 $web = New-Object Net.WebClient
 
-
-
 #make a Type PostRequest XML document using .Net XML document object
 $xmlDoc = New-Object System.Xml.XmlDocument;
 
