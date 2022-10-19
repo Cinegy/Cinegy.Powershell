@@ -56,7 +56,7 @@ function Cinegy-AddSampleMetadata($provider, $logger)
 
     # calculate MD5 has for the source file - can be referenced in the profile as {src.meta.custom-file-MD5}
     # NOTE: assuming that source is media file and location + name + extension are defines correctly in .CineLink
-    $fileName = $provider.Metadata['src.name']
+    $fileName = $provider.Metadata['src.shortname']
     $fileExt = $provider.Metadata['src.ext']
     $fileLocation = $provider.Metadata['src.location']
 
@@ -69,6 +69,29 @@ function Cinegy-AddSampleMetadata($provider, $logger)
     $logger.Info(" ==== ")
 }
 
+#
+# Change Cinegy Archive import folder
+#
+function Cinegy-ChangeArchiveImportFolder($provider, $logger)
+{
+    #log message about function start
+    $logger.Info(" == Cinegy-ChangeArchiveImportFolder == ")
+
+    #get Cinegy Archive registration settings
+    $settings = $provider.QuerySettings("Cinegy.Base.CAS.Linker.Sinks.ArchiveRegistration");
+
+    #display current node ID that is specified as Target Folder in Roll import setitngs
+    $logger.Info("Current target id: " + $settings.TargetRollTemplate.TargetFolder.ID);
+
+    #overwrite the Traget Node with new ID, so registration will be done in anothe folder
+    #use 'Default Master Clip folder' node Id
+    $newId = "5c731347-6360-489e-87ef-598b83ea96aa";
+
+    $settings.TargetRollTemplate.TargetFolder.ID = [GUID]($newId)
+    $logger.Info("New target id: " + $settings.TargetRollTemplate.TargetFolder.ID);
+
+    $logger.Info(" ==== ")    
+}
 
 # -------------------------------------------------------
 # MAIN
@@ -85,5 +108,7 @@ Cinegy-AddSampleMetadata $provider $logger
 # Sample #2 - dump all available metadata
 Cinegy-DumpProviderMetadata $provider $logger
 
+# Sample #3 - change target folder to 'Default Master Clip folder'
+Cinegy-ChangeArchiveImportFolder $provider $logger
 
-
+$logger.Info(" === Pre-Processing script - END")
