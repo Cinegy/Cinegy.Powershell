@@ -27,7 +27,7 @@ $myTeam = $match.Match.awayTeam # set to $match.Match.awayTeam if wanted
 #SetAttribute elements must have 3 attributes, the name, type and value
 $xmlSetValueElem = $xmlRootElem.AppendChild($xmlDoc.CreateElement('SetValue'));
 $xmlSetValueElem.SetAttribute("Name", "TEAMLOGO.File");
-$xmlSetValueElem.SetAttribute("Type",'Text');
+$xmlSetValueElem.SetAttribute("Type",'File');
 $xmlSetValueElem.SetAttribute("Value", $picturePath + $myTeam.logoPath);
 
 $xmlSetValueElem = $xmlRootElem.AppendChild($xmlDoc.CreateElement('SetValue'));
