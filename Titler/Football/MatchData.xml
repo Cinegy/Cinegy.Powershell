@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Match>
   <ID>1</ID>
+  <venue>Fußball Arena München</venue>  
+  <mainRef>
+	  <ID>1</ID>
+	  <name>Ivan</name>
+	  <surname>Kružliak</surname>
+	  <countryCode>SVK</countryCode>
+   </mainRef>
+<asRef1>
+	  <ID>2</ID>
+	  <name>Branislav</name>
+	  <surname>Hancko</surname>
+	  <countryCode>SVK</countryCode>
+	</asRef1>
+	<asRef2>
+	  <ID>3</ID>
+	  <name>Jan</name>
+	  <surname>Pozor</surname>
+	  <countryCode>SVK</countryCode>
+	</asRef2>
   <homeTeam>
     <ID>1</ID>
     <name>Bayern München</name>
@@ -175,25 +194,5 @@
     <coachName>Simone</coachName>
     <coachSurname>Inzaghi</coachSurname>
   </awayTeam>
-  <venue>Fußball Arena München</venue>
-  <referees>
-    <Referee>
-      <ID>1</ID>
-      <name>Ivan</name>
-      <surname>Kružliak</surname>
-      <countryCode>SVK</countryCode>
-    </Referee>
-    <Referee>
-      <ID>2</ID>
-      <name>Branislav</name>
-      <surname>Hancko</surname>
-      <countryCode>SVK</countryCode>
-    </Referee>
-    <Referee>
-      <ID>3</ID>
-      <name>Jan</name>
-      <surname>Pozor</surname>
-      <countryCode>SVK</countryCode>
-    </Referee>
-  </referees>
+  
 </Match>

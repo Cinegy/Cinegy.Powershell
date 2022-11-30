@@ -1,7 +1,7 @@
 <CinegyTitler Version="2.3">
   <RootFolder Path="C:\Data\Dev\Git\Cinegy.Title\Football\" />
   <Variables>
-    <Var Name="TITLE.Text" Type="String" UpdateType="Instant" Value="HAKEMLER" />
+    <Var Name="TITLE.Text" Type="String" UpdateType="Instant" Value="Assistant Referees" />
     <Var Name="REF.Text" Type="String" UpdateType="Instant" Value="Anthony Taylor" />
     <Var Name="AS_NAME.Text" Type="String" UpdateType="Instant" Value="Gary Beswick                       Adam Nunn" />
   </Variables>
@@ -18,7 +18,7 @@
           </Opacity>
           <TextAutoFit MinSize="4" PreferredSize="40" MinSpacing="-3.00;-3.00;-18.00" />
         </Text>
-        <Text Name="AS_TITLE" Duration="49" Color="FF242424" Opacity="0" Size="450.00;45.00" Position="0.00;-407.00;0.00" Font="Century Gothic;Regular;30;true;false" WordWrap="false" TextVAlign="Center" Value="Assistant Referees">
+        <Text Name="AS_TITLE" Duration="49" Color="FF242424" Opacity="0" Size="450.00;45.00" Position="0.00;-407.00;0.00" Font="Century Gothic;Regular;30;true;false" WordWrap="false" TextVAlign="Center" Value="${TITLE.Text}">
           <Opacity>
             <Linear Frame="17" Value="0" />
             <Linear Frame="20" Value="100" />
