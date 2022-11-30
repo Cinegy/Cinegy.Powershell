@@ -1,0 +1,134 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Title\Football\" />
+  <Variables>
+    <Var Name="TEAM1NAME.Text" Type="String" UpdateType="Instant" Value="CHELSEA" />
+    <Var Name="TEAM2NAME.Text" Type="String" UpdateType="Instant" Value="LIVERPOOL" />
+    <Var Name="TEAM1LOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Chelsea_FC.png" />
+    <Var Name="TEAM2LOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Liverpool.png" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="70" Name="STATS" PlayMode="Loop" LoopStartFrame="40" LoopEndFrame="50" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="SCENE" Duration="70">
+      <Plate Name="BACKGROUND" EditorFlags="4" Start="1" Duration="69" Size="1920.00;1080.00" Source="File" File=".\Sources\STATS.mxf" />
+      <Group Name="TEAMLOGOS" Start="1" Duration="69" Position="0.00;270.00;0.00">
+        <Plate Name="TEAM1LOGO" Start="1" Duration="69" Opacity="0" Size="90.00;90.00" Position="-421.00;0.00;0.00" Source="File" File="${TEAM1LOGO.File}" FillMode="Fill">
+          <Opacity>
+            <Linear Frame="14" Value="0" />
+            <Linear Frame="19" Value="100" />
+          </Opacity>
+        </Plate>
+        <Text Name="TEAM1NAME" Start="1" Duration="69" Opacity="0" Size="340.00;60.00" Position="-200.00;0.00;0.00" Font="Century Gothic;Regular;60;true;false" WordWrap="false" TextHAlign="Right" TextVAlign="Center" Value="${TEAM1NAME.Text}">
+          <Opacity>
+            <Linear Frame="6" Value="0" />
+            <Linear Frame="11" Value="100" />
+          </Opacity>
+          <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-6.00;-6.00;-29.00" />
+        </Text>
+        <Plate Name="TEAM2LOGO" Start="1" Duration="69" Opacity="0" Size="90.00;90.00" Position="421.00;0.00;0.00" Source="File" File="${TEAM2LOGO.File}" FillMode="Fill">
+          <Opacity>
+            <Linear Frame="14" Value="0" />
+            <Linear Frame="19" Value="100" />
+          </Opacity>
+        </Plate>
+        <Text Name="TEAM2NAME" Start="1" Duration="69" Opacity="0" Size="340.00;60.00" Position="200.00;0.00;0.00" Font="Century Gothic;Regular;60;true;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${TEAM2NAME.Text}">
+          <Opacity>
+            <Linear Frame="6" Value="0" />
+            <Linear Frame="11" Value="100" />
+          </Opacity>
+          <TextAutoFit MinSize="45" PreferredSize="60" MinSpacing="-6.00;-6.00;-29.00" />
+        </Text>
+      </Group>
+      <Group Name="STATS_TABLE" Start="1" Duration="69">
+        <Group Name="STATS_LINE_1" Start="1" Duration="69" Opacity="0" Position="0.00;173.00;0.00">
+          <Opacity>
+            <Linear Frame="18" Value="0" />
+            <Linear Frame="20" Value="100" />
+          </Opacity>
+          <Text Name="S1_T1" Start="1" Duration="69" Size="100.00;50.00" Position="-240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="%55" />
+          <Text Name="S1" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="POSSESSION %" />
+          <Text Name="S1_T2" Start="1" Duration="69" Color="FFC0C0C0" Size="100.00;50.00" Position="240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="%45" />
+          <Plate Name="Line1" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+        <Group Name="STATS_LINE_2" EditorFlags="8" Start="1" Duration="69" Opacity="0" Position="0.00;123.00;0.00">
+          <Opacity>
+            <Linear Frame="19" Value="0" />
+            <Linear Frame="21" Value="100" />
+          </Opacity>
+          <Text Name="S2_T1" Start="1" Duration="69" Size="175.00;50.00" Position="-280.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="15 / 6" />
+          <Text Name="S2" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="SHOTS" />
+          <Text Name="S2_T2" Start="1" Duration="69" Color="FFC0C0C0" Size="175.00;50.00" Position="280.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="10 / 6" />
+          <Plate Name="Line2" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+        <Group Name="STATS_LINE_3" EditorFlags="8" Start="1" Duration="69" Opacity="0" Position="0.00;73.00;0.00">
+          <Opacity>
+            <Linear Frame="20" Value="0" />
+            <Linear Frame="22" Value="100" />
+          </Opacity>
+          <Text Name="S3_T1" Start="1" Duration="69" Size="175.00;50.00" Position="-280.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="782/574" />
+          <Text Name="S3" EditorFlags="8" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="PASSES" />
+          <Text Name="S3_T2" EditorFlags="8" Start="1" Duration="69" Color="FFC0C0C0" Size="175.00;50.00" Position="280.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="653/463" />
+          <Plate Name="Line3" EditorFlags="8" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+        <Group Name="STATS_LINE_4" EditorFlags="8" Start="1" Duration="69" Opacity="0" Position="0.00;23.00;0.00">
+          <Opacity>
+            <Linear Frame="21" Value="0" />
+            <Linear Frame="23" Value="100" />
+          </Opacity>
+          <Text Name="S4_T1" EditorFlags="8" Start="1" Duration="69" Size="100.00;50.00" Position="-240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="19" />
+          <Text Name="S4" EditorFlags="8" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="TACKLES" />
+          <Text Name="S4_T2" EditorFlags="8" Start="1" Duration="69" Color="FFC0C0C0" Size="100.00;50.00" Position="240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="12" />
+          <Plate Name="Line4" EditorFlags="8" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+        <Group Name="STATS_LINE_5" EditorFlags="8" Start="1" Duration="69" Opacity="0" Position="0.00;-27.00;0.00">
+          <Opacity>
+            <Linear Frame="22" Value="0" />
+            <Linear Frame="24" Value="100" />
+          </Opacity>
+          <Text Name="S5_T1" EditorFlags="8" Start="1" Duration="69" Color="FFC0C0C0" Size="100.00;50.00" Position="-240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="16" />
+          <Text Name="S5" EditorFlags="8" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="CLEARANCES" />
+          <Text Name="S5_T2" EditorFlags="8" Start="1" Duration="69" Size="100.00;50.00" Position="240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="20" />
+          <Plate Name="Line5" EditorFlags="8" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+        <Group Name="STATS_LINE_6" EditorFlags="8" Start="1" Duration="69" Opacity="0" Position="0.00;-77.00;0.00">
+          <Opacity>
+            <Linear Frame="23" Value="0" />
+            <Linear Frame="25" Value="100" />
+          </Opacity>
+          <Text Name="S6_T1" Start="1" Duration="69" Color="FFC0C0C0" Size="100.00;50.00" Position="-240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="6" />
+          <Text Name="S6" EditorFlags="8" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="CORNERS" />
+          <Text Name="S6_T2" EditorFlags="8" Start="1" Duration="69" Size="100.00;50.00" Position="240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="7" />
+          <Plate Name="Line6" EditorFlags="8" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+        <Group Name="STATS_LINE_7" EditorFlags="8" Start="1" Duration="69" Opacity="0" Position="0.00;-127.00;0.00">
+          <Opacity>
+            <Linear Frame="24" Value="0" />
+            <Linear Frame="26" Value="100" />
+          </Opacity>
+          <Text Name="S7_T1" EditorFlags="8" Start="1" Duration="69" Size="100.00;50.00" Position="-240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="3" />
+          <Text Name="S7" EditorFlags="8" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="OFFSIDES" />
+          <Text Name="S7_T2" EditorFlags="8" Start="1" Duration="69" Size="100.00;50.00" Position="240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="3" />
+          <Plate Name="Line7" EditorFlags="8" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+        <Group Name="STATS_LINE_8" EditorFlags="8" Start="1" Duration="69" Opacity="0" Position="0.00;-177.00;0.00">
+          <Opacity>
+            <Linear Frame="25" Value="0" />
+            <Linear Frame="27" Value="100" />
+          </Opacity>
+          <Text Name="S8_T1" EditorFlags="8" Start="1" Duration="69" Size="100.00;50.00" Position="-240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="1" />
+          <Text Name="S8" EditorFlags="8" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="YELLOW CARDS" />
+          <Text Name="S8_T2" EditorFlags="8" Start="1" Duration="69" Color="FFC0C0C0" Size="100.00;50.00" Position="240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="2" />
+          <Plate Name="Line8" EditorFlags="8" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+        <Group Name="STATS_LINE_9" EditorFlags="8" Start="1" Duration="69" Opacity="0" Position="0.00;-227.00;0.00">
+          <Opacity>
+            <Linear Frame="26" Value="0" />
+            <Linear Frame="28" Value="100" />
+          </Opacity>
+          <Text Name="S9_T1" EditorFlags="8" Start="1" Duration="69" Size="100.00;50.00" Position="-240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Right" TextVAlign="Center" Value="5" />
+          <Text Name="S9" Start="1" Duration="69" Size="300.00;50.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="FOULS CONCEDED" />
+          <Text Name="S9_T2" EditorFlags="8" Start="1" Duration="69" Color="FFC0C0C0" Size="100.00;50.00" Position="240.00;0.00;0.00" Font="Century Gothic;Regular;50;true;false" TextHAlign="Left" Value="13" />
+          <Plate Name="Line9" EditorFlags="8" Start="1" Duration="69" Size="700.00;1.00" Position="0.00;-24.50;0.00" />
+        </Group>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>
