@@ -1,0 +1,1 @@
+<PostRequest><SetValue Name="City" Type="Text" Value="Amsterdam" /><SetValue Name="Temp" Type="Text" Value="2°C" /><SetValue Name="Icon_url" Type="Text" Value="C:\Data\Dev\Git\Cinegy.Powershell\Titler\TitlerScenes\weather_icon\day\143.png" /></PostRequest>

@@ -1,15 +1,54 @@
 <CityList>
-	<City Name="London" LocID="2346150" Abbreviation="Lon" />
-	<City Name="Paris" LocID="12596963" Abbreviation="Par" />
-	<City Name="Amsterdam" LocID="727232" Abbreviation="Ams" />
-	<City Name="Madrid" LocID="2346150" Abbreviation="Mad" />
-	<City Name="Lisbon" LocID="2346150" Abbreviation="Lis" />
-	<City Name="Berlin" LocID="2346150" Abbreviation="Ber" />
-	<City Name="Vienna" LocID="2346150" Abbreviation="Vie" />
-	<City Name="Roma" LocID="718345" Abbreviation="Rom" />
-	<City Name="Zagreb" LocID="2346150" Abbreviation="Zag" />	
-	<City Name="Moscow" LocID="2122265" Abbreviation="Mos" />
-	<City Name="New York" LocID="2346150" Abbreviation="New" />	
-	<City Name="Beijing" LocID="2346150" Abbreviation="Bei" />
-	<City Name="Tokyo" LocID="2346150" Abbreviation="Tok" />
+	<City Name="Amsterdam" Abbreviation="Ams" />
+	<City Name="Athens" Abbreviation="Ath" />
+	<City Name="Belgrade" Abbreviation="Bel" />
+	<City Name="Berlin" Abbreviation="Ber" />
+	<City Name="Bern" Abbreviation="Bern" />
+	<City Name="Bratislava" Abbreviation="Bra" />
+	<City Name="Brussels" Abbreviation="Bru" />		
+	<City Name="Bucharest" Abbreviation="Buc" />	
+	<City Name="Budapest" Abbreviation="Bud" />	
+	<City Name="Copenhagen" Abbreviation="Cop" />	
+	<City Name="Douglas" Abbreviation="Dou" />	
+	<City Name="Dublin" Abbreviation="Dub" />	
+	<City Name="Gibraltar" Abbreviation="Gib" />
+	<City Name="Helsinki" Abbreviation="Hel" />	
+	<City Name="Lisbon" Abbreviation="Lis" />
+	<City Name="Ljubljana" Abbreviation="Lju" />
+	<City Name="London" Abbreviation="Lon" />
+	<City Name="Luxembourg" Abbreviation="Lux" />
+	<City Name="Kiev" Abbreviation="Kie" />		
+	<City Name="Madrid" Abbreviation="Mad" />
+	<City Name="Minsk" Abbreviation="Min" />
+	<City Name="Monaco" Abbreviation="Mon" />	
+	<City Name="Moscow" Abbreviation="Mos" />
+	<City Name="Nicosia" Abbreviation="Nic" />
+	<City Name="Oslo" Abbreviation="Osl" />	
+	<City Name="Paris" Abbreviation="Par" />
+	<City Name="Podgorica" Abbreviation="Pod" />
+	<City Name="Prague" Abbreviation="Pra" />
+	<City Name="Pristina" Abbreviation="Pri" />
+	<City Name="Reykjavik" Abbreviation="Rey" />
+	<City Name="Riga" Abbreviation="Rig" />	
+	<City Name="Roma" Abbreviation="Rom" />
+	<City Name="San Marino" Abbreviation="San" />
+	<City Name="Sarajevo" Abbreviation="Sar" />
+	<City Name="Skopje" Abbreviation="Sko" />
+	<City Name="Sofia" Abbreviation="Sof" />
+	<City Name="Stockholm" Abbreviation="Sto" />
+	<City Name="Tallinn" Abbreviation="Tal" />
+	<City Name="Tbilisi" Abbreviation="Tbi" />
+	<City Name="Tirana" Abbreviation="Tir" />
+	<City Name="Vaduz" Abbreviation="Vad" />
+	<City Name="Valletta" Abbreviation="Val" />
+	<City Name="Vatican City" Abbreviation="Vat" />	
+	<City Name="Vienna" Abbreviation="Vie" />
+	<City Name="Vilnius" Abbreviation="Vil" />
+	<City Name="Warsaw" Abbreviation="War" />
+	<City Name="Yerevan" Abbreviation="Yer" />
+	<City Name="Zagreb" Abbreviation="Zag" />
+	<City Name="New York" Abbreviation="New" />	
+	<City Name="Beijing"  Abbreviation="Bei" />
+	<City Name="Tokyo" Abbreviation="Tok" />
+	<City Name="Istanbul" Abbreviation="Ist" />
 </CityList>
