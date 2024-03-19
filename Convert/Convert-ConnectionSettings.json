@@ -1,0 +1,12 @@
+{
+	"AppName": "PowerShell-Scripting",
+	"AppVersion": "1.0",
+	"LicenseId": "{6EECC5D8-DF37-4ead-B79C-25874FD616A2}",
+	"CasBaseUrl": "http://localhost:8082/ICinegyDataAccessRestService/",
+	"DatabaseServer": "SQL-SERVER",
+	"DatabaseName": "ARCHIVE-DATABASE",
+	"UserDomain": "USER-DOMAIN",
+	"UserName": "USER-NAME",
+	"UserPassword": "USER-PASSWORD",
+	"jobDropTargetId": "JOB-DROP-FOLDER-NODE-ID"
+}
