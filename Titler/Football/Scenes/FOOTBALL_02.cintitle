@@ -1,0 +1,210 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Powershell\Titler\Football\Scenes\" />
+  <Variables>
+    <Var Name="TEAMLOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Chelsea_FC.png" />
+    <Var Name="TEAMNAME.Text" Type="String" UpdateType="Instant" Value="CHELSEA" />
+    <Var Name="NO_01.Text" Type="String" UpdateType="Instant" Value="16" />
+    <Var Name="NAME_01.Text" Type="String" UpdateType="Instant" Value="Edouard [b]Mendy[/b]" />
+    <Var Name="NO_02.Text" Type="String" UpdateType="Instant" Value="2" />
+    <Var Name="NAME_02.Text" Type="String" UpdateType="Instant" Value="Antonio [b]Rüdiger[/b]" />
+    <Var Name="NO_03.Text" Type="String" UpdateType="Instant" Value="3" />
+    <Var Name="NAME_03.Text" Type="String" UpdateType="Instant" Value="Marcos [b]Alonso[/b]" />
+    <Var Name="NO_04.Text" Type="String" UpdateType="Instant" Value="6" />
+    <Var Name="NAME_04.Text" Type="String" UpdateType="Instant" Value="Thiago [b]Silva[/b]" />
+    <Var Name="NO_05.Text" Type="String" UpdateType="Instant" Value="7" />
+    <Var Name="NAME_05.Text" Type="String" UpdateType="Instant" Value="N'Golo [b]Kanté[/b]" />
+    <Var Name="NO_06.Text" Type="String" UpdateType="Instant" Value="8" />
+    <Var Name="NAME_06.Text" Type="String" UpdateType="Instant" Value="Mateo [b]Kovačić[/b]" />
+    <Var Name="NO_07.Text" Type="String" UpdateType="Instant" Value="10" />
+    <Var Name="NAME_07.Text" Type="String" UpdateType="Instant" Value="Christian [b]Pulisic[/b]" />
+    <Var Name="NO_08.Text" Type="String" UpdateType="Instant" Value="14" />
+    <Var Name="NAME_08.Text" Type="String" UpdateType="Instant" Value="Trevoh [b]Chalobah[/b]" />
+    <Var Name="NO_09.Text" Type="String" UpdateType="Instant" Value="19" />
+    <Var Name="NAME_09.Text" Type="String" UpdateType="Instant" Value="Mason [b]Mount[/b]" />
+    <Var Name="NO_10.Text" Type="String" UpdateType="Instant" Value="28" />
+    <Var Name="NAME_10.Text" Type="String" UpdateType="Instant" Value="César [b]Azpilicueta[/b]" />
+    <Var Name="NO_11.Text" Type="String" UpdateType="Instant" Value="29" />
+    <Var Name="NAME_11.Text" Type="String" UpdateType="Instant" Value="Kai [b]Havertz[/b]" />
+    <Var Name="COACH_NAME.Text" Type="String" UpdateType="Instant" Value="Thomas [b]Tuchel[/b]" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="50" Name="SQUADLIST" PlayMode="Loop" LoopStartFrame="43" LoopEndFrame="45" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="SCENE" Duration="50" Opacity="0">
+      <Opacity>
+        <Linear Frame="0" Value="0" />
+        <Linear Frame="2" Value="100" />
+        <Linear Frame="48" Value="100" />
+        <Linear Frame="50" Value="0" />
+      </Opacity>
+      <Plate Name="BACKGROUND" Start="1" Duration="49" Size="1920.00;1080.00" Source="File" File=".\Sources\SQUAD.mxf" />
+      <Plate Name="TEAMLOGO" Start="1" Duration="49" Size="350.00;350.00" Position="216.00;0.00;0.00" Source="File" File="${TEAMLOGO.File}" FillMode="Fill">
+        <Opacity>
+          <Linear Frame="22" Value="0" />
+          <Linear Frame="27" Value="100" />
+        </Opacity>
+        <Rotation>
+          <X>
+            <Linear Frame="25" Value="0.00" />
+            <Linear Frame="40" Value="-5.00" />
+            <Linear Frame="46" Value="-5.00" />
+            <Linear Frame="49" Value="0.00" />
+          </X>
+          <Y>
+            <Linear Frame="25" Value="0.00" />
+            <Linear Frame="40" Value="-25.00" />
+            <Linear Frame="46" Value="-25.00" />
+            <Linear Frame="49" Value="0.00" />
+          </Y>
+        </Rotation>
+      </Plate>
+      <Text Name="TEAMNAME" Start="1" Duration="49" Opacity="0" Size="800.00;75.00" Position="0.00;295.00;0.00" Font="Century Gothic;Regular;43;true;false" WordWrap="false" TextVAlign="Center" Value="${TEAMNAME.Text}">
+        <Opacity>
+          <Linear Frame="25" Value="0" />
+          <Linear Frame="30" Value="100" />
+        </Opacity>
+        <TextAutoFit MinSize="30" PreferredSize="43" MinSpacing="-2.00;-2.00;-14.00" />
+      </Text>
+      <Group Name="SQUAD" Start="1" Duration="49" Position="0.00;-52.00;0.00">
+        <Group Name="PLAYER_01" EditorFlags="8" Start="1" Duration="49" Position="-36.00;268.00;0.00">
+          <Opacity>
+            <Linear Frame="26" Value="0" />
+            <Linear Frame="28" Value="100" />
+          </Opacity>
+          <Text Name="NAME_01" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_01.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_01" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_01.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_02" EditorFlags="8" Start="1" Duration="49" Position="-36.00;225.00;0.00">
+          <Opacity>
+            <Linear Frame="27" Value="0" />
+            <Linear Frame="29" Value="100" />
+          </Opacity>
+          <Text Name="NAME_02" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_02.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_02" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_02.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_03" EditorFlags="8" Start="1" Duration="49" Position="-36.00;182.00;0.00">
+          <Opacity>
+            <Linear Frame="28" Value="0" />
+            <Linear Frame="30" Value="100" />
+          </Opacity>
+          <Text Name="NAME_03" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_03.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_03" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_03.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_04" EditorFlags="8" Start="1" Duration="49" Position="-36.00;139.00;0.00">
+          <Opacity>
+            <Linear Frame="29" Value="0" />
+            <Linear Frame="31" Value="100" />
+          </Opacity>
+          <Text Name="NAME_04" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_04.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_04" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_04.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_05" EditorFlags="8" Start="1" Duration="49" Position="-36.00;96.00;0.00">
+          <Opacity>
+            <Linear Frame="30" Value="0" />
+            <Linear Frame="32" Value="100" />
+          </Opacity>
+          <Text Name="NAME_05" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_05.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_05" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_05.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_06" EditorFlags="8" Start="1" Duration="49" Position="-36.00;53.00;0.00">
+          <Opacity>
+            <Linear Frame="31" Value="0" />
+            <Linear Frame="33" Value="100" />
+          </Opacity>
+          <Text Name="NAME_06" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_06.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_06" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_06.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_07" EditorFlags="8" Start="1" Duration="49" Position="-36.00;10.00;0.00">
+          <Opacity>
+            <Linear Frame="32" Value="0" />
+            <Linear Frame="34" Value="100" />
+          </Opacity>
+          <Text Name="NAME_07" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_07.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_07" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_07.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_08" EditorFlags="8" Start="1" Duration="49" Position="-36.00;-33.00;0.00">
+          <Opacity>
+            <Linear Frame="33" Value="0" />
+            <Linear Frame="35" Value="100" />
+          </Opacity>
+          <Text Name="NAME_08" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_08.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_08" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_08.Text}">
+            <TextAutoFit MinSize="39" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_09" EditorFlags="8" Start="1" Duration="49" Position="-36.00;-76.00;0.00">
+          <Opacity>
+            <Linear Frame="34" Value="0" />
+            <Linear Frame="36" Value="100" />
+          </Opacity>
+          <Text Name="NAME_09" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_09.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_09" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_09.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_10" EditorFlags="8" Start="1" Duration="49" Position="-36.00;-119.00;0.00">
+          <Opacity>
+            <Linear Frame="35" Value="0" />
+            <Linear Frame="37" Value="100" />
+          </Opacity>
+          <Text Name="NAME_10" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_10.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_10" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_10.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="PLAYER_11" EditorFlags="8" Start="1" Duration="49" Position="-36.00;-162.00;0.00">
+          <Opacity>
+            <Linear Frame="36" Value="0" />
+            <Linear Frame="38" Value="100" />
+          </Opacity>
+          <Text Name="NAME_11" Start="1" Duration="49" Size="360.00;45.00" Position="-130.00;0.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${NAME_11.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+          <Text Name="NO_11" Start="1" Duration="49" Size="50.00;50.00" Position="-355.00;0.00;0.00" Font="Century Gothic;Regular;42;true;false" TextHAlign="Right" TextVAlign="Center" Value="${NO_11.Text}">
+            <TextAutoFit MinSize="38" PreferredSize="42" MinSpacing="-2.00;-2.00;-11.00" />
+          </Text>
+        </Group>
+        <Group Name="COACH" Start="1" Duration="49" Position="520.00;-235.00;0.00">
+          <Opacity>
+            <Linear Frame="36" Value="0" />
+            <Linear Frame="38" Value="100" />
+          </Opacity>
+          <Text Name="COACH_TITLE" EditorFlags="8" Start="1" Duration="49" Size="210.00;35.00" Position="-212.00;32.00;0.00" Font="Century Gothic;Regular;35;true;false" TextHAlign="Right" TextVAlign="Center" Value="COACH" />
+          <Text Name="COACH_NAME" EditorFlags="12" Start="1" Duration="49" Size="360.00;45.00" Position="-288.00;-5.00;0.00" Font="Century Gothic;Regular;42;false;false" WordWrap="false" TextHAlign="Right" TextVAlign="Center" Value="${COACH_NAME.Text}" />
+        </Group>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>

@@ -1,0 +1,154 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Powershell\Titler\TitlerScenes\" />
+  <Variables>
+    <Var Name="TopText.Text" Type="String" UpdateType="Instant" Value="NEWS HEADLINE" />
+    <Var Name="BottomText.Text" Type="String" UpdateType="Instant" Value="AND HERE ARE THE DETAILS TO THIS NEWS AND MANY MANY MORE ON THE ACTUAL STORY" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="49" Name="Lower3rd" EditorFlags="4" PlayMode="Loop" LoopStartFrame="25" LoopEndFrame="30" LoopCount="50">
+    <Group Name="Scene" Start="1" Duration="48">
+      <Opacity>
+        <Linear Frame="35" Value="100" />
+        <Linear Frame="40" Value="0" />
+      </Opacity>
+      <Group Name="BottomGreenBar" EditorFlags="8" Start="1" Duration="48" Position="-417.00;-429.00;0.00">
+        <Group Name="BottomGreenPlateGroup" Start="1" Duration="48" Position="1.00;0.00;0.00">
+          <Plate Name="BottomGreenPlateBase" EditorFlags="8" Start="1" Duration="48" Size="781.00;111.00" Position="-56.50;0.00;0.00" FillMode="Fill">
+            <Size>
+              <Y>
+                <Linear Frame="6" Value="0.00" />
+                <Linear Frame="13" Value="111.00" />
+              </Y>
+            </Size>
+            <Position>
+              <Y>
+                <Linear Frame="6" Value="-55.00" />
+                <Linear Frame="13" Value="0.00" />
+              </Y>
+            </Position>
+            <Gradient BeginPoint="0.00" EndPoint="100.00" BeginColor="FF006F8C" EndColor="FF00A44E" />
+          </Plate>
+          <Plate Name="BottomGreenPlateCorner" Start="1" Duration="48" Size="111.00;111.00" Position="389.00;1.00;0.00" FillMode="Fill" CornerRadius="0.00;0.00;100.00;0.00" CornerRadiusSync="false">
+            <Size>
+              <Y>
+                <Linear Frame="6" Value="0.00" />
+                <Linear Frame="13" Value="111.00" />
+              </Y>
+            </Size>
+            <Position>
+              <Y>
+                <Linear Frame="6" Value="-55.00" />
+                <Linear Frame="13" Value="0.00" />
+              </Y>
+            </Position>
+            <Gradient BeginPoint="0.00" EndPoint="100.00" BeginColor="FF00A44E" EndColor="FF00A849" />
+          </Plate>
+        </Group>
+        <Group Name="BottomGreenPlateGroupLights" EditorFlags="8" Start="1" Duration="48">
+          <Plate Name="BottomGreenPlateLightsTop" Start="1" Duration="48" Opacity="49" Size="891.00;5.00" Position="0.00;53.00;0.00">
+            <Size>
+              <Y>
+                <Linear Frame="6" Value="0.00" />
+                <Linear Frame="13" Value="5.00" />
+              </Y>
+            </Size>
+            <Position>
+              <Y>
+                <Linear Frame="6" Value="-57.00" />
+                <Linear Frame="13" Value="53.00" />
+              </Y>
+            </Position>
+            <Gradient Mode="Rectangular" Direction="Out" BeginPoint="0.00" EndPoint="100.00" EndColor="FFD3D3D3" />
+          </Plate>
+        </Group>
+        <Plate Name="BottomAnimBar" Start="1" Duration="48" Opacity="0" Size="892.00;10.00" Position="0.00;45.23;0.00">
+          <Opacity>
+            <Linear Frame="8" Value="0" />
+            <Linear Frame="10" Value="40" />
+            <Linear Frame="16" Value="40" />
+            <Linear Frame="17" Value="0" />
+          </Opacity>
+          <Size>
+            <Y>
+              <Linear Frame="10" Value="25.00" />
+              <Linear Frame="12" Value="25.00" />
+              <Linear Frame="15" Value="10.00" />
+              <Linear Frame="16" Value="8.00" />
+            </Y>
+          </Size>
+          <Position>
+            <Y>
+              <Linear Frame="10" Value="-15.00" />
+              <Linear Frame="12" Value="17.00" />
+              <Linear Frame="15" Value="45.23" />
+              <Linear Frame="16" Value="52.00" />
+            </Y>
+          </Position>
+        </Plate>
+        <Plate Name="BottomTextMask" EditorFlags="8" Start="1" Duration="48" Size="880.00;110.00">
+          <Position>
+            <Y>
+              <Linear Frame="14" Value="-115.00" />
+              <Linear Frame="15" Value="-89.00" />
+              <Linear Frame="16" Value="-78.00" />
+              <Linear Frame="18" Value="-40.00" />
+              <Linear Frame="20" Value="0.00" />
+            </Y>
+          </Position>
+          <Mask />
+        </Plate>
+        <Text Name="BottomText" EditorFlags="8" Start="1" Duration="48" Size="755.00;100.00" Position="5.00;0.00;0.00" Font="Century Gothic;Regular;40;true;false" TextHAlign="Left" TextVAlign="Center" Value="${BottomText.Text}">
+          <TextAutoFit MinSize="30" PreferredSize="40" MinSpacing="-4.00;-4.00;-18.00" />
+        </Text>
+      </Group>
+      <Group Name="TopWhiteBar" EditorFlags="8" Start="1" Duration="48" Position="-417.00;-343.00;0.00">
+        <Group Name="TopWhitePlate" Start="1" Duration="48" Opacity="0">
+          <Opacity>
+            <Linear Frame="13" Value="0" />
+            <Linear Frame="16" Value="100" />
+          </Opacity>
+          <Position>
+            <Y>
+              <Linear Frame="12" Value="-145.00" />
+              <Linear Frame="16" Value="-87.00" />
+              <Linear Frame="20" Value="0.00" />
+            </Y>
+          </Position>
+          <Scale>
+            <Y>
+              <Linear Frame="12" Value="0.01" />
+              <Linear Frame="20" Value="1.00" />
+            </Y>
+          </Scale>
+          <Plate Name="TopWhitePlateLeftCorner" Start="1" Duration="48" Size="62.00;62.00" Position="-415.00;0.00;0.00" CornerRadius="45.00;0.00;0.00;0.00" CornerRadiusSync="false">
+            <Gradient Direction="Vertical" BeginPoint="75.00" EndPoint="100.00" EndColor="FFA2A2A2" />
+          </Plate>
+          <Plate Name="TopWhitePlate" EditorFlags="8" Start="1" Duration="48" Size="768.00;62.00">
+            <Gradient Direction="Vertical" BeginPoint="75.00" EndPoint="100.00" EndColor="FFA2A2A2" />
+          </Plate>
+          <Plate Name="TopWhitePlateRightCorner" Start="1" Duration="48" Size="62.00;62.00" Position="415.00;0.00;0.00" CornerRadius="0.00;45.00;0.00;0.00" CornerRadiusSync="false">
+            <Gradient Direction="Vertical" BeginPoint="75.00" EndPoint="100.00" EndColor="FFA2A2A2" />
+          </Plate>
+        </Group>
+        <Plate Name="TopTextMask" Start="1" Duration="48" Size="800.00;55.00" Position="0.00;-45.00;0.00">
+          <Position>
+            <Y>
+              <Linear Frame="17" Value="-70.00" />
+              <Linear Frame="18" Value="-48.00" />
+              <Linear Frame="20" Value="0.00" />
+            </Y>
+          </Position>
+          <Mask />
+        </Plate>
+        <Text Name="TopText" Start="1" Duration="48" Size="800.00;55.00" Position="30.00;0.00;0.00" Font="Century Gothic;Regular;45;true;false" Color="FF000000" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${TopText.Text}">
+          <Position>
+            <Y>
+              <Linear Frame="18" Value="-20.00" />
+              <Linear Frame="20" Value="0.00" />
+            </Y>
+          </Position>
+          <TextAutoFit MinSize="30" PreferredSize="45" MinSpacing="-5.00;-5.00;-20.00" />
+        </Text>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>

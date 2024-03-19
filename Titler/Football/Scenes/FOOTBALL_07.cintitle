@@ -1,0 +1,26 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Title\Football\" />
+  <Variables>
+    <Var Name="PLAYER.Text" Type="String" UpdateType="Instant" Value="11 M. SALAH" />
+    <Var Name="TEAMLOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Liverpool.png" />
+    <Var Name="ACTION_ANIM.File" Type="File" UpdateType="Instant" Value=".\Sources\GOAL.mxf" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="65" Name="ACTION" PlayMode="Loop" LoopStartFrame="45" LoopEndFrame="50" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="SCENE" Start="1" Duration="64" Opacity="92" Position="-7.00;11.00;0.00">
+      <Plate Name="BACKGROUND" EditorFlags="4" Start="1" Duration="64" Size="1920.00;1080.00" Source="File" File=".\Sources\NAMEBAR.mxf" />
+      <Plate Name="ACTION_ANIM" Start="1" Duration="64" Size="1920.00;1080.00" Source="File" File="${ACTION_ANIM.File}" />
+      <Group Name="CONTENT" Start="1" Duration="64" Opacity="0">
+        <Opacity>
+          <Linear Frame="8" Value="0" />
+          <Linear Frame="13" Value="100" />
+          <Linear Frame="53" Value="100" />
+          <Linear Frame="56" Value="0" />
+        </Opacity>
+        <Plate Name="TEAMLOGO" Start="1" Duration="64" Size="40.00;40.00" Position="-837.00;391.00;0.00" Source="File" File="${TEAMLOGO.File}" FillMode="Fill" />
+        <Text Name="PLAYERNAME" EditorFlags="8" Start="1" Duration="64" Size="245.00;45.00" Position="-682.47;383.00;0.00" Font="Century Gothic;Regular;40;true;false" TextVAlign="Center" Value="${PLAYER.Text}">
+          <TextAutoFit MinSize="30" PreferredSize="40" MinSpacing="-2.00;-2.00;-14.00" />
+        </Text>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>

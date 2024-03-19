@@ -1,0 +1,59 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Title\Football\" />
+  <Variables>
+    <Var Name="VENUE.Text" Type="String" UpdateType="Instant" Value="STAMFORD BRIDGE, LONDON" />
+    <Var Name="TEAM1NAME.Text" Type="String" UpdateType="Instant" Value="CHELSEA" />
+    <Var Name="TEAM2NAME.Text" Type="String" UpdateType="Instant" Value="LIVERPOOL" />
+    <Var Name="TEAM1LOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Chelsea_FC.png" />
+    <Var Name="TEAM2LOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Liverpool.png" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="185" Name="MATCH ID" EditorFlags="4" PlayMode="Loop" LoopStartFrame="145" LoopEndFrame="150" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="SCENE" Start="1" Duration="184">
+      <Plate Name="BACKGROUND" Start="1" Duration="184" Size="1920.00;1080.00" Source="File" File=".\Sources\ID.mxf">
+        <Opacity>
+          <Linear Frame="184" Value="100" />
+          <Linear Frame="185" Value="0" />
+        </Opacity>
+      </Plate>
+      <Group Name="TEAMLOGOS" Start="1" Duration="169" Opacity="0">
+        <Opacity>
+          <Linear Frame="23" Value="0" />
+          <Linear Frame="28" Value="100" />
+          <Linear Frame="160" Value="100" />
+          <Linear Frame="167" Value="0" />
+        </Opacity>
+        <Plate Name="TEAM1LOGO" Start="1" Duration="169" Size="115.00;115.00" Position="-556.00;5.00;0.00" Source="File" File="${TEAM1LOGO.File}" FillMode="Fill" />
+        <Plate Name="TEAM2LOGO" Start="1" Duration="169" Size="115.00;115.00" Position="556.00;5.00;0.00" Source="File" File="${TEAM2LOGO.File}" FillMode="Fill" />
+      </Group>
+      <Group Name="TEXT" Start="1" Duration="169">
+        <Text Name="VENUE" EditorFlags="8" Start="1" Duration="169" Color="FF015301" Size="415.00;45.00" Position="-405.00;101.00;0.00" Font="Century Gothic;Regular;33;true;false" WordWrap="false" TextVAlign="Center" Value="${VENUE.Text}">
+          <Opacity>
+            <Linear Frame="30" Value="0" />
+            <Linear Frame="35" Value="100" />
+            <Linear Frame="155" Value="100" />
+            <Linear Frame="160" Value="0" />
+          </Opacity>
+          <TextAutoFit Dimensions="Width" MinSize="27" PreferredSize="33" MinSpacing="-7.00;-7.00;-57.00" />
+        </Text>
+        <Text Name="TEAM1NAME" Start="1" Duration="169" Size="440.00;65.00" Position="-260.00;10.00;0.00" Font="Century Gothic;Regular;70;true;false" WordWrap="false" TextHAlign="Right" TextVAlign="Center" Value="${TEAM1NAME.Text}">
+          <Opacity>
+            <Linear Frame="20" Value="0" />
+            <Linear Frame="25" Value="100" />
+            <Linear Frame="164" Value="100" />
+            <Linear Frame="169" Value="0" />
+          </Opacity>
+          <TextAutoFit MinSize="60" PreferredSize="70" MinSpacing="-6.00;-6.00;-29.00" />
+        </Text>
+        <Text Name="TEAM2NAME" Start="1" Duration="169" Opacity="0" Size="440.00;65.00" Position="260.00;10.00;0.00" Font="Century Gothic;Regular;70;true;false" WordWrap="false" TextHAlign="Left" TextVAlign="Center" Value="${TEAM2NAME.Text}">
+          <Opacity>
+            <Linear Frame="20" Value="0" />
+            <Linear Frame="25" Value="100" />
+            <Linear Frame="164" Value="100" />
+            <Linear Frame="169" Value="0" />
+          </Opacity>
+          <TextAutoFit MinSize="60" PreferredSize="70" MinSpacing="-6.00;-6.00;-29.00" />
+        </Text>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>

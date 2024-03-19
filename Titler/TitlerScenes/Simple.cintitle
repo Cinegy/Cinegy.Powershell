@@ -1,4 +1,4 @@
-<CinegyTitler Version="2.4">
+<CinegyTitler Version="2.3">
   <RootFolder Path="C:\Data\Dev\Git\Cinegy.Powershell\Titler\TitlerScenes\" />
   <Variables>
     <Var Name="Hour" Type="Float" UpdateType="Instant" Value="0.00" />

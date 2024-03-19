@@ -1,7 +1,7 @@
-<CinegyTitler Version="2.4">
+<CinegyTitler Version="2.3">
   <RootFolder Path="C:\Data\Dev\Git\Cinegy.Powershell\Titler\TitlerScenes\" />
   <Variables>
-    <Var Name="City1" Type="String" UpdateType="AutoRestart" Value="Amsterdam" />
+    <Var Name="City1" Type="String" UpdateType="Restart" Value="Amsterdam" />
     <Var Name="Temp1" Type="String" UpdateType="Restart" Value="5 c" />
     <Var Name="Icon1_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\182.png" />
     <Var Name="City2" Type="String" UpdateType="Restart" Value="London" />
@@ -10,12 +10,25 @@
     <Var Name="City3" Type="String" UpdateType="Restart" Value="Moscow" />
     <Var Name="Temp3" Type="String" UpdateType="Restart" Value="5 c" />
     <Var Name="Icon3_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\200.png" />
-    <Var Name="City4" Type="String" UpdateType="Restart" Value="Madrid" />
+    <Var Name="City4" Type="String" UpdateType="AutoRestart" Value="Madrid" />
     <Var Name="Temp4" Type="String" UpdateType="Restart" Value="5 c" />
     <Var Name="Icon4_url" Type="File" UpdateType="Restart" Value=".\weather_icon\day\329.png" />
   </Variables>
   <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="30" Name="Weather_PS2" EditorFlags="4" PlayMode="Loop" LoopStartFrame="11" LoopEndFrame="19" LoopCount="-1" BackgroundColor="FF000000">
     <Group Name="Weather elements" Duration="30">
+      <Group Name="DateTime elements" EditorFlags="8" Duration="30" Position="690.00;438.00;0.00">
+        <Opacity>
+          <Linear Frame="1" Value="0" />
+          <Linear Frame="6" Value="100" />
+          <Linear Frame="24" Value="100" />
+          <Linear Frame="29" Value="0" />
+        </Opacity>
+        <Plate Name="DateTime Strap" Duration="30" Opacity="89" Size="350.00;100.00">
+          <Gradient BeginPoint="0.00" EndPoint="100.00" BeginColor="FF006F8C" EndColor="FF00A649" />
+        </Plate>
+        <Clock Name="Date" Duration="30" Size="350.00;60.00" Position="0.00;20.00;0.00" Font="Century Gothic;Regular;50;true;false" WordWrap="false" TextVAlign="Top" Value="Text" Type="Date" DateFormat="dd.mm.yyyy" TimeOffset="00:00:00.000" />
+        <Clock Name="Time" Duration="30" Size="350.00;60.00" Position="0.00;-25.00;0.00" Font="Century Gothic;Regular;55;true;false" WordWrap="false" Value="Text" TimeOffset="00:00:00.000" />
+      </Group>
       <Plate Name="Weather Strap" Duration="30" Color="FF071658" Opacity="88" Size="1535.00;1.42" Position="0.00;-480.00;0.00">
         <Size>
           <Y>

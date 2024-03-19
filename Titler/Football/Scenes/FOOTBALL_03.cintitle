@@ -1,0 +1,116 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Title\Football\" />
+  <Variables>
+    <Var Name="TEAMLOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Liverpool.png" />
+    <Var Name="TEAMNAME.Text" Type="String" UpdateType="Instant" Value="LIVERPOOL" />
+    <Var Name="NAME_01.Text" Type="String" UpdateType="Instant" Value="C.Kelleher" />
+    <Var Name="NAME_02.Text" Type="String" UpdateType="Instant" Value="T. Alexander-Arnold" />
+    <Var Name="NAME_03.Text" Type="String" UpdateType="Instant" Value="I. Konate" />
+    <Var Name="NAME_04.Text" Type="String" UpdateType="Instant" Value="V. van Dijk" />
+    <Var Name="NAME_05.Text" Type="String" UpdateType="Instant" Value="K. Tsimikas" />
+    <Var Name="NAME_06.Text" Type="String" UpdateType="Instant" Value="J. Henderson" />
+    <Var Name="NAME_07.Text" Type="String" UpdateType="Instant" Value="Fabinho" />
+    <Var Name="NAME_08.Text" Type="String" UpdateType="Instant" Value="J. Milner" />
+    <Var Name="NAME_09.Text" Type="String" UpdateType="Instant" Value="M. Salah" />
+    <Var Name="NAME_10.Text" Type="String" UpdateType="Instant" Value="S. Mane" />
+    <Var Name="NAME_11.Text" Type="String" UpdateType="Instant" Value="D. Jota" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="85" Name="FORMATION" PlayMode="Loop" LoopStartFrame="60" LoopEndFrame="65" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="SCENE" Start="1" Duration="84" Opacity="92">
+      <Plate Name="BACKGROUND" Start="1" Duration="84" Size="1920.00;1080.00" Position="3.00;-7.00;0.00" Source="File" File=".\Sources\FORMATION.mxf">
+        <Opacity>
+          <Linear Frame="22" Value="0" />
+          <Linear Frame="30" Value="100" />
+        </Opacity>
+      </Plate>
+      <Group Name="TEAMS" Start="1" Duration="84" Position="0.00;299.00;0.00">
+        <Opacity>
+          <Linear Frame="70" Value="100" />
+          <Linear Frame="80" Value="0" />
+        </Opacity>
+        <Plate Name="TEAM1LOGO" Start="1" Duration="84" Opacity="0" Size="100.00;100.00" Position="-441.00;-13.00;0.00" Source="File" File="${TEAMLOGO.File}" FillMode="Fill">
+          <Opacity>
+            <Linear Frame="42" Value="0" />
+            <Linear Frame="50" Value="100" />
+          </Opacity>
+        </Plate>
+        <Text Name="TEAM1NAME" Start="1" Duration="84" Opacity="0" Size="430.00;60.00" Position="0.00;-5.00;0.00" Font="Century Gothic;Regular;48;true;false" WordWrap="false" TextVAlign="Center" Value="${TEAMNAME.Text}">
+          <Opacity>
+            <Linear Frame="24" Value="0" />
+            <Linear Frame="30" Value="100" />
+          </Opacity>
+          <TextAutoFit MinSize="40" PreferredSize="48" MinSpacing="-2.00;-2.00;-14.00" />
+        </Text>
+      </Group>
+      <Group Name="PLAYERLAR" Start="1" Duration="84" Opacity="0" Rotation="-20.00;0.00;0.00">
+        <Opacity>
+          <Linear Frame="30" Value="0" />
+          <Linear Frame="40" Value="100" />
+          <Linear Frame="70" Value="100" />
+          <Linear Frame="80" Value="0" />
+        </Opacity>
+        <Rotation>
+          <X>
+            <Linear Frame="30" Value="20.00" />
+            <Linear Frame="40" Value="0.00" />
+          </X>
+        </Rotation>
+        <Plate Name="PLAYER_01" EditorFlags="4" Start="1" Duration="84" Size="225.00;41.00" Position="0.00;-279.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_01" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_01.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-14.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_02" Start="1" Duration="84" Size="225.00;41.00" Position="388.00;-187.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_02" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_02.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_03" Start="1" Duration="84" Size="225.00;41.00" Position="133.00;-187.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_03" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_03.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_04" Start="1" Duration="84" Size="225.00;41.00" Position="-133.00;-187.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_04" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_04.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_05" Start="1" Duration="84" Size="225.00;41.00" Position="-388.00;-187.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_05" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_05.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_06" Start="1" Duration="84" Size="225.00;41.00" Position="248.00;-35.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_06" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_06.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_07" Start="1" Duration="84" Size="225.00;41.00" Position="0.00;-35.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_07" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_07.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_08" Start="1" Duration="84" Size="225.00;41.00" Position="-248.00;-35.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_08" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_08.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_09" Start="1" Duration="84" Size="225.00;41.00" Position="133.00;90.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_09" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_09.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_10" Start="1" Duration="84" Size="225.00;41.00" Position="-133.00;90.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_10" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_10.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+        <Plate Name="PLAYER_11" Start="1" Duration="84" Size="225.00;41.00" Position="0.00;183.00;0.00" Source="File" File=".\Sources\FORMATION_BAR.png">
+          <Text Name="NAME_11" Start="1" Duration="84" Size="200.00;30.00" Font="Century Gothic;Regular;28;true;false" WordWrap="false" TextVAlign="Center" Value="${NAME_11.Text}">
+            <TextAutoFit MinSize="23" PreferredSize="28" MinSpacing="-2.00;-2.00;-13.00" />
+          </Text>
+        </Plate>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>

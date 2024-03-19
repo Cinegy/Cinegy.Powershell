@@ -1,0 +1,88 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Title\Football\" />
+  <Variables>
+    <Var Name="TEAM1.Text" Type="String" UpdateType="Instant" Value="CHE" />
+    <Var Name="TEAM2.Text" Type="String" UpdateType="Instant" Value="LIV" />
+    <Var Name="SCORE1.Text" Type="String" UpdateType="Instant" Value="2" />
+    <Var Name="SCORE2.Text" Type="String" UpdateType="Instant" Value="2" />
+    <Var Name="CLOCK.Text" Type="String" UpdateType="Instant" Value="90:00" />
+    <Var Name="EKINFO.Visible" Type="Bool" UpdateType="Instant" Value="False" />
+    <Var Name="INFOTEXT.Text" Type="String" UpdateType="Instant" Value="+5" />
+    <Var Name="TEAM1LOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Chelsea_FC.png" />
+    <Var Name="TEAM2LOGO.File" Type="File" UpdateType="Instant" Value=".\Sources\Liverpool.png" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="110" Name="TIMER" PlayMode="Loop" LoopStartFrame="80" LoopEndFrame="85" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="SCENE" Start="1" Duration="109" Opacity="92" Position="-7.00;11.00;0.00">
+      <Group Name="EKINFO" EditorFlags="8" Start="1" Duration="109" Visible="${EKINFO.Visible}" Opacity="0" Position="-80.00;0.00;-1.01">
+        <Opacity>
+          <Linear Frame="25" Value="0" />
+          <Linear Frame="30" Value="100" />
+          <Linear Frame="100" Value="100" />
+          <Linear Frame="105" Value="0" />
+        </Opacity>
+        <Plate Name="INFOBAR" EditorFlags="8" Start="1" Duration="109" Size="1920.00;1080.00" Position="-4.00;0.00;0.00" Source="File" File=".\Sources\ADD.png" />
+        <Text Name="INFOTEXT" Start="1" Duration="109" Color="FF000000" Size="40.00;25.00" Position="-668.00;459.00;0.00" Font="Century Gothic;Regular;30;true;false" TextVAlign="Center" Value="${INFOTEXT.Text}" />
+      </Group>
+      <Plate Name="BACKGROUND" EditorFlags="4" Start="1" Duration="109" Size="1920.00;1080.00" Source="File" File=".\Sources\TIMER.mxf" />
+      <Group Name="CONTENT" Start="1" Duration="109">
+        <Group Name="TEAMCOLORS" Start="1" Duration="109">
+          <Plate Name="TEAMMASK" Start="1" Duration="109" Color="FFC90000" Opacity="0" Size="1920.00;1080.00" Position="-80.00;0.00;0.00" Source="File" File=".\Sources\TIMERLOGO_MASK.png" FillMode="Fill">
+            <Opacity>
+              <Linear Frame="23" Value="0" />
+              <Linear Frame="30" Value="100" />
+              <Linear Frame="91" Value="100" />
+              <Linear Frame="95" Value="0" />
+            </Opacity>
+            <Mask />
+          </Plate>
+          <Plate Name="TEAM1LOGO" Start="1" Duration="109" Size="60.00;60.00" Position="-826.00;428.00;0.00" Source="File" File="${TEAM1LOGO.File}" FillMode="Fill" />
+          <Plate Name="TEAM2LOGO" Start="1" Duration="109" Size="60.00;60.00" Position="-531.00;428.00;0.00" Source="File" File="${TEAM2LOGO.File}" FillMode="Fill" />
+        </Group>
+        <Group Name="TEXT" Start="1" Duration="109" Position="-80.00;0.00;0.00">
+          <Text Name="TEAM1NAME" Start="1" Duration="109" Color="FF000000" Size="70.00;40.00" Position="-688.00;427.00;0.00" Font="Century Gothic;Regular;35;true;false" TextVAlign="Center" Value="${TEAM1.Text}">
+            <Opacity>
+              <Linear Frame="24" Value="0" />
+              <Linear Frame="28" Value="100" />
+              <Linear Frame="92" Value="100" />
+              <Linear Frame="97" Value="0" />
+            </Opacity>
+            <TextAutoFit MinSize="25" PreferredSize="35" MinSpacing="-4.00;-4.00;-21.00" />
+          </Text>
+          <Text Name="TEAM2NAME" Start="1" Duration="109" Color="FF000000" Opacity="0" Size="70.00;40.00" Position="-510.00;427.00;0.00" Font="Century Gothic;Regular;35;true;false" TextVAlign="Center" Value="${TEAM2.Text}">
+            <Opacity>
+              <Linear Frame="24" Value="0" />
+              <Linear Frame="28" Value="100" />
+              <Linear Frame="92" Value="100" />
+              <Linear Frame="97" Value="0" />
+            </Opacity>
+            <TextAutoFit MinSize="25" PreferredSize="35" MinSpacing="-4.00;-4.00;-21.00" />
+          </Text>
+          <Clock Name="CLOCK" Start="1" Duration="109" Opacity="0" Size="95.00;30.00" Position="-599.00;459.00;0.00" Font="Century Gothic;Regular;33;true;false" Value="Text" Type="Stopwatch" TimeFormat="mm:ss" StartValue="0.00" TimeOffset="01:12:12.000">
+            <Opacity>
+              <Linear Frame="9" Value="0" />
+              <Linear Frame="15" Value="100" />
+              <Linear Frame="102" Value="100" />
+              <Linear Frame="105" Value="0" />
+            </Opacity>
+          </Clock>
+          <Text Name="SCORE1" Start="1" Duration="109" Size="50.00;40.00" Position="-624.00;427.00;0.00" Font="Century Gothic;Regular;45;true;false" TextVAlign="Center" Value="${SCORE1.Text}">
+            <Opacity>
+              <Linear Frame="7" Value="0" />
+              <Linear Frame="11" Value="100" />
+              <Linear Frame="102" Value="100" />
+              <Linear Frame="107" Value="0" />
+            </Opacity>
+          </Text>
+          <Text Name="SCORE2" Start="1" Duration="109" Size="50.00;40.00" Position="-574.00;427.00;0.00" Font="Century Gothic;Regular;45;true;false" TextVAlign="Center" Value="${SCORE2.Text}">
+            <Opacity>
+              <Linear Frame="7" Value="0" />
+              <Linear Frame="11" Value="100" />
+              <Linear Frame="102" Value="100" />
+              <Linear Frame="107" Value="0" />
+            </Opacity>
+          </Text>
+        </Group>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>

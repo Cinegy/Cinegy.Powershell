@@ -1,0 +1,42 @@
+<CinegyTitler Version="2.3">
+  <RootFolder Path="C:\Data\Dev\Git\Cinegy.Title\Football\" />
+  <Variables>
+    <Var Name="TITLE.Text" Type="String" UpdateType="Instant" Value="Assistant Referees" />
+    <Var Name="REF.Text" Type="String" UpdateType="Instant" Value="Anthony Taylor" />
+    <Var Name="AS_NAME.Text" Type="String" UpdateType="Instant" Value="Gary Beswick                       Adam Nunn" />
+  </Variables>
+  <Scene Width="1920" Height="1080" Fps="25.000" Progressive="false" Aspect="16:9" Duration="50" Name="REF" PlayMode="Loop" LoopStartFrame="21" LoopEndFrame="24" LoopCount="-1" BackgroundColor="FF000000">
+    <Group Name="SCENE" Start="1" Duration="49" Opacity="92">
+      <Plate Name="BACKGROUND" EditorFlags="4" Start="1" Duration="48" Size="1920.00;1080.00" Source="File" File=".\Sources\REF.mxf" />
+      <Group Name="TEXT" Start="1" Duration="49">
+        <Text Name="REF" Duration="49" Opacity="0" Size="235.00;45.00" Position="0.00;-373.00;0.00" Font="Century Gothic;Regular;40;true;false" WordWrap="false" TextVAlign="Center" Value="${REF.Text}">
+          <Opacity>
+            <Linear Frame="5" Value="0" />
+            <Linear Frame="10" Value="100" />
+            <Linear Frame="42" Value="100" />
+            <Linear Frame="47" Value="0" />
+          </Opacity>
+          <TextAutoFit MinSize="4" PreferredSize="40" MinSpacing="-3.00;-3.00;-18.00" />
+        </Text>
+        <Text Name="AS_TITLE" Duration="49" Color="FF242424" Opacity="0" Size="450.00;45.00" Position="0.00;-407.00;0.00" Font="Century Gothic;Regular;30;true;false" WordWrap="false" TextVAlign="Center" Value="${TITLE.Text}">
+          <Opacity>
+            <Linear Frame="17" Value="0" />
+            <Linear Frame="20" Value="100" />
+            <Linear Frame="35" Value="100" />
+            <Linear Frame="39" Value="0" />
+          </Opacity>
+          <TextAutoFit MinSize="4" PreferredSize="30" MinSpacing="-3.00;-3.00;-18.00" />
+        </Text>
+        <Text Name="AS_NAME" Duration="49" Color="FF242424" Opacity="0" Size="430.00;45.00" Position="0.00;-441.00;0.00" Font="Century Gothic;Regular;30;true;false" WordWrap="false" TextVAlign="Center" Value="${AS_NAME.Text}">
+          <Opacity>
+            <Linear Frame="18" Value="0" />
+            <Linear Frame="20" Value="100" />
+            <Linear Frame="34" Value="100" />
+            <Linear Frame="38" Value="0" />
+          </Opacity>
+          <TextAutoFit MinSize="4" PreferredSize="30" MinSpacing="-2.00;-2.00;-15.00" />
+        </Text>
+      </Group>
+    </Group>
+  </Scene>
+</CinegyTitler>
