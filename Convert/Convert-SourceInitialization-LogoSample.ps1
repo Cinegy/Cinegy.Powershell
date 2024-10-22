@@ -1,4 +1,4 @@
-# Cinegy Convert v21.x Source Initialization script
+# Cinegy Convert v24.x Source Initialization script
 
 # The script demonstrates simple logo embedding on top of the actual source (clip or sequence from Cinegy Archive or media file)
 # The source media is transformed into Timeline XML, then new video track is added on top and simple Logo clip
@@ -39,12 +39,12 @@ if($null -ne $provider.SourceNode)
 $timeline = $cinelink.Media.Timeline
 $duration = $timeline.Duration
 	
-if([string]::IsNullOrEmpty($duration))
+if([string]::IsNullOrEmpty($duration) -or ([double]$duration -lt 0.001))
 {
     # locate the last clip stop time and use it as a timeline duration
 	[double]$maxDuration = 0.0;
 	$logger.Info("Timeline duration is not specified. Looking up the last clip in the timeline...")
-	foreach($group in $timeline.Group.GetEnumerator())
+	foreach($group in $timeline.Groups.GetEnumerator())
 	{
 		foreach($track in $group.Tracks.GetEnumerator())
 		{
@@ -63,18 +63,18 @@ if([string]::IsNullOrEmpty($duration))
 }
 
 $logger.Info("Timeline duration is $duration")
-if([string]::IsNullOrEmpty($duration))
+if([string]::IsNullOrEmpty($duration) -or ([double]$duration -lt 0.001))
 {
 	throw "Failed to get Cinelink duration to insert Logo!"
 }
 
 # create video clip quality that reference the logo file
-$logoClipQuality = [Cinegy.MCR.Timeline.TrackStructure.ClipQuality]::new()
+$logoClipQuality = [Cinegy.MCR.Structure.ClipQuality]::new()
 $logoClipQuality.Id = "0"
 $logoClipQuality.Source = $logoPath
 
 # create new video clip with the specified quality 
-$logoClip = [Cinegy.MCR.Timeline.TrackStructure.Clip]::new()
+$logoClip = [Cinegy.MCR.Structure.Clip]::new()
 $logoClip.SourceReference = "65535"
 $logoClip.Start = "0"
 $logoClip.Start = "0"
@@ -84,12 +84,12 @@ $logoClip.MediaStop = $duration
 $logoClip.QualityTags.Add($logoClipQuality)
 
 # create new transparent video track
-$logoTrack = [Cinegy.MCR.Timeline.Track]::new()
+$logoTrack = [Cinegy.MCR.Structure.Track]::new()
 $logoTrack.Format = "ARGB32"
 $logoTrack.Clips.Add($logoClip)
 
 # add new video track to the existing ones
-$videoGroup = $timeline.Group[0]
+$videoGroup = $timeline.Groups[0]
 $videoGroup.Tracks.Add($logoTrack)
 
 # add generated cinelink to script output
